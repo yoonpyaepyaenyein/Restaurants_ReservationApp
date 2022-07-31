@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "90497275616",
+    "project_id": "butterapp-eff16",
+    "storage_bucket": "butterapp-eff16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90497275616:android:ba105cf7a0fe3e2ce02285",
+        "android_client_info": {
+          "package_name": "com.butterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "90497275616-v34ed2bg3ipll0qseeccg63qr5rkl04t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYvXO5sZGAc-L0amMWiSJdqFYzAv4E6V4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "90497275616-v34ed2bg3ipll0qseeccg63qr5rkl04t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,13 @@
+export default {
+  BLACK: '#414449',
+  WHITE: '#fff',
+  GRADIENT_1: '#67C8D5',
+  GRADIENT_2: '#67C8D5',
+
+  GRADIENT_3: '#3884A0',
+  ORANGE: '#EFB041',
+  GRAY: '#6C737A',
+
+  DARK_BLUE: '#3884A0',
+  LIGHT_BLUE: '#67C8D5',
+};
