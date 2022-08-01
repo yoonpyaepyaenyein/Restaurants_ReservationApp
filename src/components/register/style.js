@@ -9,7 +9,7 @@ import COLORS from '../../utils/colorUtils';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COLORS.WHITE,
+    backgroundColor: '#F2F9FC',
   },
   title: {
     color: COLORS.DARK_BLUE,

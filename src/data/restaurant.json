@@ -1,0 +1,275 @@
+{
+  "html_attributions": [],
+  "next_page_token": "some token",
+  "results": [
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 16.846332,
+          "lng": 96.136606
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 16.84633294302915,
+            "lng": 96.1366064130291502
+          },
+          "southwest": {
+            "lat": 5.9619014697085,
+            "lng": 96.136606169708497
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+      "name": "Pizza hut",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 0,
+          "html_attributions": [],
+          "photo_reference": "",
+          "width": 0
+        }
+      ],
+      "place_id": "some place id 1",
+      "rating": 4,
+      "reference": "",
+      "user_ratings_total": 832,
+      "vicinity": "First Floor,marketplace 6.5 miles, Pyay Road"
+    },
+    {
+      "geometry": {
+        "location": {
+          "lat": 16.7792,
+          "lng": 96.1536
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 16.7792259802915,
+            "lng": 96.1536393180291502
+          },
+          "southwest": {
+            "lat": 16.7792280197085,
+            "lng": 96.153695219708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
+      "name": "Bonchon",
+      "photos": [
+        {
+          "height": 1536,
+          "html_attributions": [],
+          "photo_reference": "",
+          "width": 2048
+        }
+      ],
+      "place_id": "some place id 2",
+      "plus_code": {
+        "compound_code": "",
+        "global_code": ""
+      },
+      "reference": "",
+      "scope": "",
+      "types": [
+        "spa",
+        "lodging",
+        "restaurant",
+        "food",
+        "gym",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "vicinity": "Junction City"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 16.7778,
+          "lng": 96.1421
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 16.77784323029149,
+            "lng": 96.142161330291503
+          },
+          "southwest": {
+            "lat": 16.777852697085,
+            "lng": 96.142163369708498
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "name": "Fufu",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 0,
+          "html_attributions": [],
+          "photo_reference": "",
+          "width": 0
+        }
+      ],
+      "place_id": "some place id 3",
+      "rating": 4.2,
+      "reference": "",
+      "user_ratings_total": 122,
+      "vicinity": "77 5th Street, Yangon, Myanmar"
+    },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "geometry": {
+        "location": {
+          "lat": 16.8626,
+          "lng": 96.1215
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 16.86267373029149,
+            "lng": 96.1215934197085
+          },
+          "southwest": {
+            "lat": 16.86267576970849,
+            "lng": 96.1215913802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "name": "Lotteria",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 2791,
+          "html_attributions": [""],
+          "photo_reference": "",
+          "width": 3837
+        }
+      ],
+      "place_id": "some place id 4",
+      "plus_code": {
+        "compound_code": "",
+        "global_code": ""
+      },
+      "price_level": 3,
+      "rating": 4.2,
+      "reference": "",
+      "scope": "",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 490,
+      "vicinity": "City Mart Thamine Branch"
+    },
+    {
+      "business_status": "OPERATIONAL",
+      "geometry": {
+        "location": {
+          "lat": 16.8896,
+          "lng": 96.1096
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 16.8896120302915,
+            "lng": 96.1096037697085
+          },
+          "southwest": {
+            "lat": 16.88961406970851,
+            "lng": 96.1096017302915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "name": "YKKO",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": [
+        {
+          "height": 3571,
+          "html_attributions": [""],
+          "photo_reference": "",
+          "width": 5357
+        }
+      ],
+      "place_id": "some place id 5",
+      "plus_code": {
+        "compound_code": "",
+        "global_code": ""
+      },
+      "price_level": 2,
+      "rating": 4.3,
+      "reference": "",
+      "scope": "",
+      "types": [
+        "hair_care",
+        "restaurant",
+        "food",
+        "health",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 1644,
+      "vicinity": "Lan Thit Road, Nant Thar Gone Quarter, Yangon"
+    },
+    {
+      "business_status": "CLOSED_TEMPORARILY",
+      "geometry": {
+        "location": {
+          "lat": 16.8626,
+          "lng": 96.1215
+        },
+        "viewport": {
+          "northeast": {
+            "lat": 16.86267373029149,
+            "lng": 96.1215934197085
+          },
+          "southwest": {
+            "lat": 16.86267576970849,
+            "lng": 96.1215913802915
+          }
+        }
+      },
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+      "name": "Golden Duck",
+      "permanently_closed": true,
+      "photos": [
+        {
+          "height": 2791,
+          "html_attributions": [""],
+          "photo_reference": "",
+          "width": 3837
+        }
+      ],
+      "place_id": "some place id 6",
+      "plus_code": {
+        "compound_code": "",
+        "global_code": ""
+      },
+      "price_level": 3,
+      "rating": 4.2,
+      "reference": "",
+      "scope": "",
+      "types": [
+        "bar",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 490,
+      "vicinity": "No. 224, Strand Rd, Yangon,"
+    }
+  ],
+
+  "status": "OK"
+}

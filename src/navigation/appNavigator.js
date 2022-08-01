@@ -3,34 +3,30 @@ import {View, Text} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import messaging from '@react-native-firebase/messaging';
+import camelize from 'camelize';
 
 //Component
 import AuthStack from './stack/AuthStack';
 import {AuthContext} from '../context/context';
 import {appStorage} from '../utils/appStorage';
-import DashboardStack from './stack/DashboardStack';
+import {mocks, mockImages} from '../data/index';
+import {RestaurantContext} from '../context/context';
+import {
+  restaurantsRequest,
+  restaurantsTransform,
+} from '../utils/restaurantService';
+
+import TabNavigator from './tabs/TabNavigator';
 
 const AppNavigator = () => {
   const [auth, setAuth] = useState(false);
   const [deviceToken, setDeviceToken] = useState(null);
   const [splash, setSplash] = useState(true);
+  const [restaurants, setRestaurants] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    getData();
-    getToken();
-  }, []);
-
-  const getToken = async () => {
-    const fcmToken = await messaging().getToken();
-    // console.log('fcmToken>>>', fcmToken);
-    if (fcmToken) {
-      appStorage.setItem('@device.token', fcmToken);
-      setDeviceToken(fcmToken);
-    } else {
-      console.log('token error');
-    }
-  };
-
+  /*Auth Context*/
   const context = {
     auth,
     getAuth: value => {
@@ -42,10 +38,43 @@ const AppNavigator = () => {
     },
   };
 
+  /*Restaurant Context*/
+  const restaurantContext = {
+    restaurants,
+    getRestaurants: value => {
+      setRestaurants(value);
+    },
+    isLoading,
+    getIsLoading: value => {
+      setIsLoading(value);
+    },
+    error,
+    getError: value => {
+      setIsLoading(value);
+    },
+  };
+
+  /*Component Mounted*/
+  useEffect(() => {
+    getData();
+    getToken();
+  }, []);
+
+  /*Token */
+  const getToken = async () => {
+    const fcmToken = await messaging().getToken();
+    if (fcmToken) {
+      appStorage.setItem('@device.token', fcmToken);
+      setDeviceToken(fcmToken);
+    } else {
+      console.log('token error');
+    }
+  };
+
+  /*Auth Data*/
   const getData = () => {
     try {
       const data = appStorage.getItem('@device.token');
-      // console.log('data>>>', data);
       const userData = appStorage.getItem('@user.data');
       if (data) {
         setAuth(true);
@@ -73,9 +102,9 @@ const AppNavigator = () => {
   } else if (auth) {
     return (
       <AuthContext.Provider value={context}>
-        <NavigationContainer>
-          <DashboardStack />
-        </NavigationContainer>
+        <RestaurantContext.Provider value={restaurantContext}>
+          <TabNavigator />
+        </RestaurantContext.Provider>
       </AuthContext.Provider>
     );
   } else {
