@@ -4,20 +4,17 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
+import COLORS from '../../utils/colorUtils';
+
 const Styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#F2F9FC',
-  },
+    ...StyleSheet.absoluteFillObject,
 
-  list: {
-    flex: 1,
-    paddingBottom: wp(3),
+    justifyContent: 'flex-end',
+    alignItems: 'center',
   },
-  indicatorContainer: {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
+  map: {
+    ...StyleSheet.absoluteFillObject,
   },
 });
 

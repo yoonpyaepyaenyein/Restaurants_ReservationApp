@@ -27,7 +27,6 @@ const RestaurantInfoCard = ({restaurant = {}}) => {
   } = restaurant;
 
   const ratingArray = Array.from(new Array(Math.floor(rating)));
-  // console.log(ratingArray);
   return (
     <View style={styles.cardContainer}>
       <Card elevation={5} style={styles.card}>

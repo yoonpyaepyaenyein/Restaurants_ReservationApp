@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, TouchableOpacity} from 'react-native';
 import {ActivityIndicator, Colors} from 'react-native-paper';
 
 //Style
@@ -19,7 +19,7 @@ import {
 } from '../../utils/restaurantService';
 import COLORS from '../../utils/colorUtils';
 
-const RestaurantInfo = () => {
+const RestaurantInfo = ({navigation}) => {
   const {
     restaurants,
     isLoading,
@@ -48,6 +48,11 @@ const RestaurantInfo = () => {
     }, 2000);
   };
 
+  const restaurantDetailHandler = value => {
+    navigation.navigate('RestaurantDetails', {restaurant: value});
+    // console.log('restaurant>>>', value);
+  };
+
   return (
     <View style={Styles.container}>
       {isLoading && (
@@ -67,12 +72,15 @@ const RestaurantInfo = () => {
         data={restaurants}
         renderItem={({item}) => {
           return (
-            <View style={Styles.list}>
-              <RestaurantInfoCard restaurant={item} />
-            </View>
+            <TouchableOpacity onPress={() => restaurantDetailHandler(item)}>
+              <View style={Styles.list}>
+                <RestaurantInfoCard restaurant={item} />
+              </View>
+            </TouchableOpacity>
           );
         }}
         keyExtractor={item => item.name}
+        showsVerticalScrollIndicator={false}
       />
     </View>
   );

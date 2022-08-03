@@ -41,6 +41,7 @@ const AppNavigator = () => {
   /*Restaurant Context*/
   const restaurantContext = {
     restaurants,
+
     getRestaurants: value => {
       setRestaurants(value);
     },
@@ -53,6 +54,7 @@ const AppNavigator = () => {
       setIsLoading(value);
     },
   };
+  // console.log('RESTAURANTS>>>>>', restaurants);
 
   /*Component Mounted*/
   useEffect(() => {

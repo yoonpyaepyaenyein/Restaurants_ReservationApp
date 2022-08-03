@@ -15,12 +15,12 @@ import RestaurantIcon from '@assets/icons/restaurant';
 import SettingIcon from '@assets/icons/setting';
 import MapIcon from '@assets/icons/map';
 import {RestaurantContext} from '../../context/context';
+import MapScreen from '@pages/maps/Map';
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   const Setting = () => <Text>Settings</Text>;
-  const Map = () => <Text>Map</Text>;
 
   return (
     <NavigationContainer>
@@ -48,7 +48,7 @@ const TabNavigator = () => {
         />
         <Tab.Screen
           name="Map"
-          component={Map}
+          component={MapScreen}
           options={{
             headerShown: false,
             title: 'Map',
