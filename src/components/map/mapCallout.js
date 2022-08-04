@@ -9,7 +9,7 @@ import styles from './style';
 
 const MapCallout = props => {
   return (
-    <>
+    <View style={styles.container}>
       <Text style={styles.imageContainer}>
         <Image
           style={styles.image}
@@ -19,7 +19,7 @@ const MapCallout = props => {
         />
       </Text>
       <Text style={{color: 'red'}}>{props.data.name}</Text>
-    </>
+    </View>
   );
 };
 

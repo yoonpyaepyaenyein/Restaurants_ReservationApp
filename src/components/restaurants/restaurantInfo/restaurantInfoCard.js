@@ -13,6 +13,7 @@ import {
 import COLORS from '../../../utils/colorUtils';
 import Star from '@assets/icons/star';
 import Open from '@assets/icons/open';
+import Favourite from '@pages/Favourites/FavouriteToggle/Favourite';
 
 const RestaurantInfoCard = ({restaurant = {}}) => {
   const {
@@ -26,11 +27,22 @@ const RestaurantInfoCard = ({restaurant = {}}) => {
     placeId,
   } = restaurant;
 
+  useEffect(() => {
+    // console.log('PROPS>>>', restaurant);
+  }, []);
+
   const ratingArray = Array.from(new Array(Math.floor(rating)));
   return (
     <View style={styles.cardContainer}>
       <Card elevation={5} style={styles.card}>
-        <Card.Cover key={name} style={styles.cover} source={{uri: photos[0]}} />
+        <View>
+          <Favourite restaurant={restaurant} />
+          <Card.Cover
+            key={name}
+            style={styles.cover}
+            source={{uri: photos[0]}}
+          />
+        </View>
         <View style={styles.info}>
           <Text style={styles.title}>{name}</Text>
 

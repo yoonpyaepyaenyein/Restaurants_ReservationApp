@@ -1,39 +1,46 @@
 import React from 'react';
-import {View, Text, TextInput, StyleSheet} from 'react-native';
-import COLORS from '../../../utils/colorUtils';
+import {
+  View,
+  Text,
+  TextInput,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
+
+//Style
+import styles from './style';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-const SearchBar = () => {
+//Component
+import Heartless from '@assets/icons/heartless';
+import Heart from '@assets/icons/heart';
+import COLORS from '../../../utils/colorUtils';
+
+const SearchBar = props => {
   return (
     <View>
       {/* searchbar */}
-      <TextInput
-        style={styles.searchBar}
-        placeholder="Search"
-        placeholderTextColor={COLORS.GRAY}
-      />
+      <View style={styles.container}>
+        <TextInput
+          style={styles.searchBar}
+          placeholderTextColor={COLORS.GRAY}
+          // placeholder="find your favourite"
+        />
+        <View style={styles.heartless}>
+          <TouchableOpacity onPress={props.onFavouritesToggle}>
+            {props.isFavouriteToggle ? (
+              <Heart width={hp(5)} height={hp(5)} colors={COLORS.LIGHT_BLUE} />
+            ) : (
+              <Heart width={hp(5)} height={hp(5)} color={COLORS.LIGHT_BLUE} />
+            )}
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 };
 
 export default SearchBar;
-
-const styles = StyleSheet.create({
-  searchBar: {
-    borderColor: COLORS.LIGHT_BLUE,
-    backgroundColor: COLORS.GRAY,
-    borderWidth: wp(0.2),
-    marginHorizontal: hp(5),
-    marginVertical: hp(3),
-    borderRadius: wp(5),
-    backgroundColor: COLORS.WHITE,
-    paddingStart: hp(3),
-    shadowOffset: {width: 0, height: 5},
-    shadowColor: COLORS.DARK_BLUE,
-    shadowOpacity: hp(0.5),
-    elevation: 3,
-  },
-});

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {View, Text, FlatList, TouchableOpacity} from 'react-native';
 import {ActivityIndicator, Colors} from 'react-native-paper';
 
@@ -10,6 +10,7 @@ import {
 } from 'react-native-responsive-screen';
 
 //Component
+import COLORS from '../../utils/colorUtils';
 import RestaurantInfoCard from '../../components/restaurants/restaurantInfo/restaurantInfoCard';
 import SearchBar from '@components/restaurants/searchBar/searchBar';
 import {RestaurantContext} from '../../context/context';
@@ -17,9 +18,12 @@ import {
   restaurantsTransform,
   restaurantsRequest,
 } from '../../utils/restaurantService';
-import COLORS from '../../utils/colorUtils';
+import {FavouriteContext} from '../../context/context';
+import FavouriteBar from '../Favourites/FavouriteBar/FavouriteBar';
 
 const RestaurantInfo = ({navigation}) => {
+  const [toggle, setIsToggle] = useState(false);
+
   const {
     restaurants,
     isLoading,
@@ -28,6 +32,8 @@ const RestaurantInfo = ({navigation}) => {
     getIsLoading,
     getError,
   } = useContext(RestaurantContext);
+
+  const {favourite, getFavourite} = useContext(FavouriteContext);
 
   useEffect(() => {
     retrieveRestaurants();
@@ -66,8 +72,12 @@ const RestaurantInfo = ({navigation}) => {
         </View>
       )}
       <View style={Styles.search}>
-        <SearchBar />
+        <SearchBar
+          isFavouriteToggle={toggle}
+          onFavouritesToggle={() => setIsToggle(!toggle)}
+        />
       </View>
+      {toggle && <FavouriteBar favourites={favourite} />}
       <FlatList
         data={restaurants}
         renderItem={({item}) => {

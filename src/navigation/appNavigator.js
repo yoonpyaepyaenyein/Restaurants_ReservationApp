@@ -3,18 +3,13 @@ import {View, Text} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import messaging from '@react-native-firebase/messaging';
-import camelize from 'camelize';
 
 //Component
 import AuthStack from './stack/AuthStack';
 import {AuthContext} from '../context/context';
 import {appStorage} from '../utils/appStorage';
-import {mocks, mockImages} from '../data/index';
 import {RestaurantContext} from '../context/context';
-import {
-  restaurantsRequest,
-  restaurantsTransform,
-} from '../utils/restaurantService';
+import {FavouriteContext} from '../context/context';
 
 import TabNavigator from './tabs/TabNavigator';
 
@@ -25,6 +20,7 @@ const AppNavigator = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [favourite, setFavourite] = useState([]);
 
   /*Auth Context*/
   const context = {
@@ -54,7 +50,14 @@ const AppNavigator = () => {
       setIsLoading(value);
     },
   };
-  // console.log('RESTAURANTS>>>>>', restaurants);
+
+  /*Favourite Context*/
+  const favouriteContext = {
+    favourite,
+    getFavourite: value => {
+      setFavourite(value);
+    },
+  };
 
   /*Component Mounted*/
   useEffect(() => {
@@ -62,7 +65,7 @@ const AppNavigator = () => {
     getToken();
   }, []);
 
-  /*Token */
+  /*Firebase Token */
   const getToken = async () => {
     const fcmToken = await messaging().getToken();
     if (fcmToken) {
@@ -73,7 +76,7 @@ const AppNavigator = () => {
     }
   };
 
-  /*Auth Data*/
+  /*Authentication*/
   const getData = () => {
     try {
       const data = appStorage.getItem('@device.token');
@@ -104,9 +107,11 @@ const AppNavigator = () => {
   } else if (auth) {
     return (
       <AuthContext.Provider value={context}>
-        <RestaurantContext.Provider value={restaurantContext}>
-          <TabNavigator />
-        </RestaurantContext.Provider>
+        <FavouriteContext.Provider value={favouriteContext}>
+          <RestaurantContext.Provider value={restaurantContext}>
+            <TabNavigator />
+          </RestaurantContext.Provider>
+        </FavouriteContext.Provider>
       </AuthContext.Provider>
     );
   } else {

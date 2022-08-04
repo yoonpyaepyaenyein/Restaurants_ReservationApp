@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
 import MapView, {Callout, Marker} from 'react-native-maps';
@@ -21,10 +21,15 @@ const Map = ({navigation}) => {
     longitudeDelta: 0.0421,
   };
 
+  useEffect(() => {
+    // console.log('res::::', restaurants);
+  }, []);
+
   return (
     <View style={Styles.container}>
       <MapView style={Styles.map} initialRegion={yangonRegion}>
         {restaurants.map(restaurant => {
+          // console.log('rest::::', restaurant);
           return (
             <Marker
               key={restaurant.name}
@@ -37,7 +42,7 @@ const Map = ({navigation}) => {
               <Callout
                 onPress={() =>
                   navigation.navigate('RestaurantDetails', {
-                    restaurant: restaurant,
+                    restaurant,
                   })
                 }>
                 <MapCallout data={restaurant} />
