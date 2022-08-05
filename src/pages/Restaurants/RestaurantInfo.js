@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react';
 import {View, Text, FlatList, TouchableOpacity} from 'react-native';
-import {ActivityIndicator, Colors} from 'react-native-paper';
+import {ActivityIndicator} from 'react-native-paper';
 
 //Style
 import Styles from './Style';
@@ -11,7 +11,7 @@ import {
 
 //Component
 import COLORS from '../../utils/colorUtils';
-import RestaurantInfoCard from '../../components/restaurants/restaurantInfo/restaurantInfoCard';
+import RestaurantInfoCard from '@components/restaurants/restaurantInfo/restaurantInfoCard';
 import SearchBar from '@components/restaurants/searchBar/searchBar';
 import {RestaurantContext} from '../../context/context';
 import {
@@ -56,11 +56,11 @@ const RestaurantInfo = ({navigation}) => {
 
   const restaurantDetailHandler = value => {
     navigation.navigate('RestaurantDetails', {restaurant: value});
-    // console.log('restaurant>>>', value);
   };
 
   return (
     <View style={Styles.container}>
+      {/* Loading Indicator */}
       {isLoading && (
         <View style={Styles.indicatorContainer}>
           <ActivityIndicator
@@ -71,13 +71,19 @@ const RestaurantInfo = ({navigation}) => {
           />
         </View>
       )}
+
+      {/* Favourite Search */}
       <View style={Styles.search}>
         <SearchBar
           isFavouriteToggle={toggle}
           onFavouritesToggle={() => setIsToggle(!toggle)}
         />
       </View>
-      {toggle && <FavouriteBar favourites={favourite} />}
+      {toggle && (
+        <FavouriteBar favourites={favourite} onNavigate={navigation.navigate} />
+      )}
+
+      {/* restaurant data  */}
       <FlatList
         data={restaurants}
         renderItem={({item}) => {

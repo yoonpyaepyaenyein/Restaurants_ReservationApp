@@ -32,9 +32,9 @@ const SearchBar = props => {
         <View style={styles.heartless}>
           <TouchableOpacity onPress={props.onFavouritesToggle}>
             {props.isFavouriteToggle ? (
-              <Heart width={hp(5)} height={hp(5)} colors={COLORS.LIGHT_BLUE} />
+              <Heart width={hp(5)} height={hp(5)} colors="red" />
             ) : (
-              <Heart width={hp(5)} height={hp(5)} color={COLORS.LIGHT_BLUE} />
+              <Heart width={hp(5)} height={hp(5)} color="red" />
             )}
           </TouchableOpacity>
         </View>

@@ -1,21 +1,29 @@
-// import React from 'react';
-// import {View, Text, Image} from 'react-native';
+import React from 'react';
+import {View, Text, Image} from 'react-native';
 
-// //Style
-// import styles from './styles';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
+import styles from './styles';
 
-// const CompactRestaurantInfo = props => {
-//   const markerImage = {
-//     one: require('../../../../assets/images/bonchon.jpg'),
-//     two: require('../../../../assets/images/pizza.jpg'),
-//   };
+const CompactRestaurantInfo = props => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={{
+            uri: props.restaurant.photos[0],
+          }}
+          resizeMode={'cover'}
+        />
+      </Text>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{props.restaurant.name}</Text>
+      </View>
+    </View>
+  );
+};
 
-//   return (
-//     <View style={styles.item}>
-//       {/* <Image style={styles.image} {require('../../../../assets/images/bonchon.jpg')} /> */}
-//       <Text style={{color: 'red'}}>{props.restaurant.name}</Text>
-//     </View>
-//   );
-// };
-
-// export default CompactRestaurantInfo;
+export default CompactRestaurantInfo;

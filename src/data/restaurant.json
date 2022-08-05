@@ -9,6 +9,7 @@
           "lat": 16.846332,
           "lng": 96.136606
         },
+
         "viewport": {
           "northeast": {
             "lat": 16.84633294302915,
@@ -67,6 +68,7 @@
         }
       ],
       "place_id": "some place id 2",
+      "rating": 4,
       "plus_code": {
         "compound_code": "",
         "global_code": ""
@@ -117,7 +119,7 @@
         }
       ],
       "place_id": "some place id 3",
-      "rating": 4.2,
+      "rating": 5,
       "reference": "",
       "user_ratings_total": 122,
       "vicinity": "77 5th Street, Yangon, Myanmar"
@@ -157,7 +159,7 @@
         "global_code": ""
       },
       "price_level": 3,
-      "rating": 4.2,
+      "rating": 4,
       "reference": "",
       "scope": "",
       "types": [
@@ -207,7 +209,7 @@
         "global_code": ""
       },
       "price_level": 2,
-      "rating": 4.3,
+      "rating": 4,
       "reference": "",
       "scope": "",
       "types": [
@@ -256,7 +258,7 @@
         "global_code": ""
       },
       "price_level": 3,
-      "rating": 4.2,
+      "rating": 3,
       "reference": "",
       "scope": "",
       "types": [

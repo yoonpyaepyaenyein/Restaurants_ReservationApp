@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import messaging from '@react-native-firebase/messaging';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 //Component
 import AuthStack from './stack/AuthStack';
@@ -59,11 +60,37 @@ const AppNavigator = () => {
     },
   };
 
+  // Favourite Storing Using AsyncStorage
+  const saveFavourites = async restaurant => {
+    try {
+      const jsonValue = JSON.stringify(restaurant);
+      await AsyncStorage.setItem('@favourite', jsonValue);
+    } catch (e) {
+      console.log('error storing', e);
+    }
+  };
+
+  const loadFavourites = async () => {
+    try {
+      const value = await AsyncStorage.getItem('@favourite');
+      if (value !== null) {
+        setFavourite(JSON.parse(value));
+      }
+    } catch (e) {
+      console.log('error loading', e);
+    }
+  };
+
   /*Component Mounted*/
   useEffect(() => {
     getData();
     getToken();
+    loadFavourites();
   }, []);
+
+  useEffect(() => {
+    saveFavourites(favourite);
+  }, [favourite]);
 
   /*Firebase Token */
   const getToken = async () => {

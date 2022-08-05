@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {View, Text, TextInput, FlatList} from 'react-native';
+import {View, Text} from 'react-native';
 import {Card} from 'react-native-paper';
 
 //Style
@@ -10,48 +10,39 @@ import {
 } from 'react-native-responsive-screen';
 
 //Component
-import COLORS from '../../../utils/colorUtils';
 import Star from '@assets/icons/star';
 import Open from '@assets/icons/open';
 import Favourite from '@pages/Favourites/FavouriteToggle/Favourite';
 
-const RestaurantInfoCard = ({restaurant = {}}) => {
-  const {
-    name = 'KFC',
-    icon,
-    photos = 'https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg',
-    address = 'HleDen',
-    rating = 4,
-    isOpenNow = true,
-    isClosedTemporarily = true,
-    placeId,
-  } = restaurant;
-
+const RestaurantInfoCard = props => {
   useEffect(() => {
-    // console.log('PROPS>>>', restaurant);
+    // console.log('PROPS>>>', props.restaurant.rating);
   }, []);
 
-  const ratingArray = Array.from(new Array(Math.floor(rating)));
+  const ratingArray = Array.from(new Array(props.restaurant.rating));
+
   return (
     <View style={styles.cardContainer}>
       <Card elevation={5} style={styles.card}>
         <View>
-          <Favourite restaurant={restaurant} />
+          {/* favourite */}
+          <Favourite restaurant={props.restaurant} />
+
           <Card.Cover
-            key={name}
+            key={props.restaurant.name}
             style={styles.cover}
-            source={{uri: photos[0]}}
+            source={{uri: props.restaurant.photos[0]}}
           />
         </View>
         <View style={styles.info}>
-          <Text style={styles.title}>{name}</Text>
+          <Text style={styles.title}>{props.restaurant.name}</Text>
 
           {/* card info */}
           <View style={styles.section}>
             <View style={styles.rating}>
-              {ratingArray.map((_, i) => (
+              {ratingArray.map(() => (
                 <Star
-                  // key={`star-${placeId}-{i}`}
+                  // key={`star-${placeI}-{i}`}
                   key={Math.random()}
                   width={hp(2.6)}
                   height={hp(3)}
@@ -60,7 +51,7 @@ const RestaurantInfoCard = ({restaurant = {}}) => {
               ))}
             </View>
             <View style={styles.sectionEnd}>
-              {isClosedTemporarily && (
+              {props.restaurant.isClosedTemporarily && (
                 <Text
                   style={{
                     color: 'red',
@@ -72,14 +63,14 @@ const RestaurantInfoCard = ({restaurant = {}}) => {
               )}
 
               <View>
-                {isOpenNow && (
+                {props.restaurant.isOpenNow && (
                   <Open width={hp(4)} height={hp(4)} style={styles.open} />
                 )}
               </View>
             </View>
           </View>
 
-          <Text style={styles.address}>{address}</Text>
+          <Text style={styles.address}>{props.restaurant.address}</Text>
         </View>
       </Card>
     </View>
