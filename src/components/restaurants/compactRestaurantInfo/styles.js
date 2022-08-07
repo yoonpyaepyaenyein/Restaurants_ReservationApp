@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     alignItems: 'center',
     top: -25,
-    borderRadius: 40,
+    resizeMode: 'cover',
   },
   image: {
     width: 100,
@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
     borderColor: COLORS.BLACK,
     borderWidth: 2,
     borderRadius: 40,
-    overflow: 'hidden',
+    // overflow: 'hidden',
+    resizeMode: 'cover',
   },
   textContainer: {
     // backgroundColor: 'green',

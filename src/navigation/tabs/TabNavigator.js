@@ -16,6 +16,8 @@ import SettingIcon from '@assets/icons/setting';
 import MapIcon from '@assets/icons/map';
 import {RestaurantContext} from '../../context/context';
 import MapScreen from '@pages/maps/Map';
+import BookingStack from '../stack/BookingStack';
+import CartIcon from '@assets/icons/cart';
 
 const Tab = createBottomTabNavigator();
 
@@ -55,6 +57,28 @@ const TabNavigator = () => {
             tabBarIcon: ({focused, color, size}) => (
               <MapIcon
                 colors={focused ? COLORS.DARK_BLUE : COLORS.BLACK}
+                width={hp(3)}
+                height={hp(3)}
+              />
+            ),
+            tabBarLabelStyle: {
+              fontSize: hp(1.6),
+              paddingBottom: hp(0.5),
+            },
+            tabBarActiveTintColor: COLORS.DARK_BLUE,
+            tabBarInactiveTintColor: COLORS.BLACK,
+          }}
+        />
+
+        <Tab.Screen
+          name="BookingStack"
+          component={BookingStack}
+          options={{
+            headerShown: false,
+            title: 'Booking',
+            tabBarIcon: ({focused, color, size}) => (
+              <CartIcon
+                colors={focused ? COLORS.DARK_BLUE : '#000000'}
                 width={hp(3)}
                 height={hp(3)}
               />

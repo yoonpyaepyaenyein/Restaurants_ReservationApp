@@ -10,16 +10,16 @@ import {
 } from 'react-native-responsive-screen';
 
 //Component
-import COLORS from '../../utils/colorUtils';
+import COLORS from '../../../utils/colorUtils';
 import RestaurantInfoCard from '@components/restaurants/restaurantInfo/restaurantInfoCard';
 import SearchBar from '@components/restaurants/searchBar/searchBar';
-import {RestaurantContext} from '../../context/context';
+import {RestaurantContext} from '../../../context/context';
 import {
   restaurantsTransform,
   restaurantsRequest,
-} from '../../utils/restaurantService';
-import {FavouriteContext} from '../../context/context';
-import FavouriteBar from '../Favourites/FavouriteBar/FavouriteBar';
+} from '../../../utils/restaurantService';
+import {FavouriteContext} from '../../../context/context';
+import FavouriteBar from '../../Favourites/FavouriteBar/FavouriteBar';
 
 const RestaurantInfo = ({navigation}) => {
   const [toggle, setIsToggle] = useState(false);

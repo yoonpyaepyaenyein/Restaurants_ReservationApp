@@ -3,14 +3,21 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 
 //Component
-import RestaurantInfoScreen from '@pages/Restaurants/RestaurantInfo';
+import RestaurantInfoScreen from '@pages/Restaurants/RestaurantInfo/RestaurantInfo';
 import RestaurantDetailsScreen from '@pages/Restaurants/RestaurantDetails/RestaurantDetails';
+import BookingDetailScreen from '../../pages/Booking/BookingDetail/BookingDetail';
 
 const Stack = createNativeStackNavigator();
 
 const DashboardStack = ({navigation, route}) => {
   useLayoutEffect(() => {
-    let showRouteName = ['DashboardStack', 'RestaurantInfo', 'Map'];
+    let showRouteName = [
+      'DashboardStack',
+      'RestaurantInfo',
+      'BookingStack',
+      ' BookingDetail',
+      'Map',
+    ];
     let routeName = getFocusedRouteNameFromRoute(route);
 
     if (
@@ -31,6 +38,7 @@ const DashboardStack = ({navigation, route}) => {
         name="RestaurantDetails"
         component={RestaurantDetailsScreen}
       />
+      <Stack.Screen name="BookingDetail" component={BookingDetailScreen} />
     </Stack.Navigator>
   );
 };

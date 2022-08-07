@@ -17,14 +17,6 @@ import {appStorage} from '../../../utils/appStorage';
 const Favourite = ({restaurant}) => {
   const {favourite, getFavourite} = useContext(FavouriteContext);
 
-  // useEffect(() => {
-  //   loadFavourites();
-  // }, []);
-  // useEffect(() => {
-  //   saveFavourites(favourite);
-  // }, [favourite]);
-  // console.log(favourite.length);
-
   const isFavourite = favourite.find(r => r.placeId === restaurant.placeId);
   const addToFavourite = restaurant => {
     getFavourite([...favourite, restaurant]);
@@ -36,30 +28,6 @@ const Favourite = ({restaurant}) => {
     );
     getFavourite(newFavourites);
   };
-
-  // const saveFavourites = () => {
-  //   try {
-  //     appStorage.setItem(
-  //       '@favourites',
-  //       addToFavourite,
-  //       removeFromFavourite,
-  //       favourite,
-  //     );
-  //   } catch (error) {
-  //     console.log('error', error);
-  //   }
-  // };
-
-  // const loadFavourites = () => {
-  //   try {
-  //     const data = appStorage.getItem('@favourites');
-  //     if (data !== null) {
-  //       getFavourite(value);
-  //     }
-  //   } catch (error) {
-  //     console.log('error', error);
-  //   }
-  // };
 
   return (
     <View style={Styles.container}>

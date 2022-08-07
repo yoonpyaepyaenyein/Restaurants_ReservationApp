@@ -10,4 +10,5 @@ export default {
 
   DARK_BLUE: '#3884A0',
   LIGHT_BLUE: '#67C8D5',
+  BACKGROUND: '#F2F9FC',
 };

@@ -4,6 +4,7 @@ import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import messaging from '@react-native-firebase/messaging';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {Provider} from 'react-redux';
 
 //Component
 import AuthStack from './stack/AuthStack';
@@ -11,6 +12,7 @@ import {AuthContext} from '../context/context';
 import {appStorage} from '../utils/appStorage';
 import {RestaurantContext} from '../context/context';
 import {FavouriteContext} from '../context/context';
+import store from '../store';
 
 import TabNavigator from './tabs/TabNavigator';
 
@@ -60,7 +62,7 @@ const AppNavigator = () => {
     },
   };
 
-  // Favourite Storing Using AsyncStorage
+  //  Storing Favourite
   const saveFavourites = async restaurant => {
     try {
       const jsonValue = JSON.stringify(restaurant);
@@ -92,7 +94,7 @@ const AppNavigator = () => {
     saveFavourites(favourite);
   }, [favourite]);
 
-  /*Firebase Token */
+  /* Storing Firebase Token */
   const getToken = async () => {
     const fcmToken = await messaging().getToken();
     if (fcmToken) {
@@ -133,21 +135,25 @@ const AppNavigator = () => {
     );
   } else if (auth) {
     return (
-      <AuthContext.Provider value={context}>
-        <FavouriteContext.Provider value={favouriteContext}>
-          <RestaurantContext.Provider value={restaurantContext}>
-            <TabNavigator />
-          </RestaurantContext.Provider>
-        </FavouriteContext.Provider>
-      </AuthContext.Provider>
+      <Provider store={store}>
+        <AuthContext.Provider value={context}>
+          <FavouriteContext.Provider value={favouriteContext}>
+            <RestaurantContext.Provider value={restaurantContext}>
+              <TabNavigator />
+            </RestaurantContext.Provider>
+          </FavouriteContext.Provider>
+        </AuthContext.Provider>
+      </Provider>
     );
   } else {
     return (
-      <AuthContext.Provider value={context}>
-        <NavigationContainer>
-          <AuthStack />
-        </NavigationContainer>
-      </AuthContext.Provider>
+      <Provider store={store}>
+        <AuthContext.Provider value={context}>
+          <NavigationContainer>
+            <AuthStack />
+          </NavigationContainer>
+        </AuthContext.Provider>
+      </Provider>
     );
   }
 };
