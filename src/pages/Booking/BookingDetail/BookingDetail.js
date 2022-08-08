@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, ToastAndroid} from 'react-native';
 
-import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import {useDispatch} from 'react-redux';
 import {
   widthPercentageToDP as wp,
@@ -36,17 +35,14 @@ const BookingDetail = ({navigation, route}) => {
       vicinity: restaurant.vicinity,
       id: restaurant.id,
     };
-    // console.log('DATA>>>', data);
-    dispatch(actionBooking.addBooking(data));
-    navigation.goBack();
-  };
 
-  const showDatePicker = () => {
-    setDatePickerVisibility(true);
-  };
-
-  const hideDatePicker = data => {
-    setDatePickerVisibility(false);
+    if (data.bookingName && data.phNo) {
+      dispatch(actionBooking.addBooking(data));
+      navigation.goBack();
+      ToastAndroid.show('Update Successful', ToastAndroid.SHORT);
+    } else {
+      ToastAndroid.show('Please Fill Information', ToastAndroid.SHORT);
+    }
   };
 
   return (
@@ -58,21 +54,8 @@ const BookingDetail = ({navigation, route}) => {
           onChangeName={value => setBookingName(value)}
           noValue={phNo}
           onChangeNo={value => setPhNo(value)}
-          // confirm={confirmHandler}
+          confirm={confirmHandler}
         />
-      </View>
-      {/* <View>
-        <TimePicker
-          showDatePicker={showDatePicker}
-          isVisible={isDatePickerVisible}
-          mode="datetime"
-          hideDatePicker={hideDatePicker}
-        />
-      </View> */}
-      <View style={{marginTop: wp(30), alignItems: 'center'}}>
-        <TouchableOpacity onPress={confirmHandler}>
-          <Text style={{color: COLORS.BLACK}}>CONFIRM</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );

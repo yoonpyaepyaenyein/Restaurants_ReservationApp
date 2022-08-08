@@ -16,10 +16,10 @@ import {
 } from 'react-native-responsive-screen';
 
 //Component
-import Back from '../../../../assets/icons/back';
+import Back from '@assets/icons/back';
 import COLORS from '../../../utils/colorUtils';
 
-const BookingHeader = props => {
+const BookingListContent = props => {
   const renderComponent = ({item}) => {
     return (
       <View style={styles.bookingCard}>
@@ -27,8 +27,38 @@ const BookingHeader = props => {
         <View style={styles.textContainer}>
           <Text style={styles.name}>{item.name}</Text>
           <Text style={styles.address}>{item.vicinity}</Text>
-          <Text style={styles.name}>{item.bookingName}</Text>
-          <Text style={styles.address}>{item.phNo}</Text>
+
+          <View
+            style={{
+              marginTop: wp(2),
+              flexDirection: 'row',
+              borderColor: COLORS.DARK_BLUE,
+              borderWidth: wp(0.2),
+              borderRadius: wp(3),
+              height: wp(15),
+            }}>
+            <View style={{paddingLeft: wp(3), paddingTop: wp(1)}}>
+              <Text style={styles.name}>{item.bookingName}</Text>
+              <Text style={styles.address}>{item.phNo}</Text>
+            </View>
+            <View
+              style={{
+                marginLeft: wp(10),
+                alignItems: 'center',
+                marginTop: wp(2),
+                borderColor: COLORS.GRAY,
+                borderWidth: wp(0.1),
+                borderRadius: wp(1),
+                height: wp(8),
+                width: wp(18),
+              }}>
+              <TouchableOpacity onPress={() => props.update(item)}>
+                <Text style={{color: COLORS.LIGHT_BLUE, paddingTop: wp(2)}}>
+                  Update
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
         </View>
         <View
           style={{
@@ -37,11 +67,6 @@ const BookingHeader = props => {
             height: wp(18),
             justifyContent: 'space-between',
           }}>
-          <TouchableOpacity>
-            <Text style={{color: COLORS.LIGHT_BLUE, paddingTop: wp(3)}}>
-              Update
-            </Text>
-          </TouchableOpacity>
           <TouchableOpacity onPress={() => props.delete(item)}>
             <Text style={{color: COLORS.LIGHT_BLUE}}>Delete</Text>
           </TouchableOpacity>
@@ -53,7 +78,9 @@ const BookingHeader = props => {
   return (
     <SafeAreaView style={{backgroundColor: COLORS.WHITE, flex: 1}}>
       <View style={styles.header}>
-        <Back width={hp(3)} height={hp(3)} color={COLORS.DARK_BLUE} />
+        <TouchableOpacity onPress={props.goBack}>
+          <Back width={hp(3)} height={hp(3)} color={COLORS.DARK_BLUE} />
+        </TouchableOpacity>
         <Text style={styles.title}>BookingList</Text>
       </View>
       <FlatList
@@ -66,4 +93,4 @@ const BookingHeader = props => {
   );
 };
 
-export default BookingHeader;
+export default BookingListContent;

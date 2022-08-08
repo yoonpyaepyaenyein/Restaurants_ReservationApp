@@ -37,6 +37,7 @@ const BookingDetailContent = props => {
           placeholderTextColor={COLORS.GRAY}
           value={props.noValue}
           onChangeText={props.onChangeNo}
+          keyboardType="number-pad"
         />
         <TouchableOpacity>
           <View style={styles.datePicker}>
@@ -44,6 +45,11 @@ const BookingDetailContent = props => {
               Pick Date
             </Text>
           </View>
+        </TouchableOpacity>
+      </View>
+      <View style={{marginTop: wp(30), alignItems: 'center'}}>
+        <TouchableOpacity onPress={props.confirm}>
+          <Text style={{color: COLORS.BLACK}}>CONFIRM</Text>
         </TouchableOpacity>
       </View>
     </View>

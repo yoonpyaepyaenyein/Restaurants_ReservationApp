@@ -21,7 +21,6 @@ const RestaurantDetails = ({route, navigation}) => {
   };
 
   const bookingHandler = value => {
-    // console.log('VALUE', value);
     navigation.navigate('BookingDetail', {restaurant: value});
     // dispatch(actionBooking.addBooking(value));
     // console.log('RES>>>', value);

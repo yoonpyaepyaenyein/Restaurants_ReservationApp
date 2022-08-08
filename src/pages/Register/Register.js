@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import {View, Text, ToastAndroid} from 'react-native';
 import auths from '@react-native-firebase/auth';
 
@@ -9,6 +9,7 @@ import Styles from './Style';
 import RegisterHeader from '@components/register/registerHeader';
 import {appStorage} from '../../utils/appStorage';
 import {AuthContext} from '../../context/context';
+import {encryptData, decryptData} from '../../utils/secureData';
 
 const Register = ({navigation}) => {
   const [name, setName] = useState('');
@@ -25,6 +26,7 @@ const Register = ({navigation}) => {
       password: password,
       confirmPassword: confirmPassword,
     };
+
     if (email && password) {
       auths()
         .createUserWithEmailAndPassword(email, password)

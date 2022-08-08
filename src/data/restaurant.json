@@ -35,6 +35,7 @@
         }
       ],
       "id": 1,
+      "place_id": "some place id 1",
       "rating": 4,
       "reference": "",
       "user_ratings_total": 832,
@@ -69,6 +70,7 @@
         }
       ],
       "id": 2,
+      "place_id": "some place id 2",
       "rating": 4,
       "plus_code": {
         "compound_code": "",
@@ -121,6 +123,7 @@
         }
       ],
       "id": 3,
+      "place_id": "some place id 3",
       "rating": 5,
       "reference": "",
       "user_ratings_total": 122,
@@ -157,6 +160,7 @@
         }
       ],
       "id": 4,
+      "place_id": "some place id 4",
       "plus_code": {
         "compound_code": "",
         "global_code": ""
@@ -208,6 +212,7 @@
         }
       ],
       "id": 5,
+      "place_id": "some place id 5",
       "plus_code": {
         "compound_code": "",
         "global_code": ""
@@ -258,6 +263,7 @@
         }
       ],
       "id": 6,
+      "place_id": "some place id 6",
       "plus_code": {
         "compound_code": "",
         "global_code": ""

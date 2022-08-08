@@ -1,4 +1,4 @@
-import {ADD_BOOKING, DELETE_BOOKING} from '../type';
+import {ADD_BOOKING, DELETE_BOOKING, UPDATE_BOOKING} from '../type';
 
 const initialState = {
   bookingItems: [],
@@ -24,6 +24,22 @@ export default (state = initialState, action) => {
       return {
         ...state,
         bookingItems: updateBookings,
+      };
+
+    //Update
+    case UPDATE_BOOKING:
+      const currentData = action.updateBooking;
+
+      let prodIndex = state.bookingItems.findIndex(
+        item => item.id === currentData.id,
+      );
+
+      const updateBook = [...state.bookingItems];
+      updateBook[prodIndex] = currentData;
+
+      return {
+        ...state,
+        bookingItems: updateBook,
       };
 
     //Delete
