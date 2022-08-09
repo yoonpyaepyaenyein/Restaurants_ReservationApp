@@ -12,12 +12,13 @@ export default (state = initialState, action) => {
       let updateBookings;
 
       const newBooking = {
-        id: newData.id,
+        id: state.bookingItems.length + 1,
         name: newData.name,
         vicinity: newData.vicinity,
         photos: newData.photos,
         bookingName: newData.bookingName,
         phNo: newData.phNo,
+        time: newData.time,
       };
       updateBookings = [...state.bookingItems, newBooking];
 

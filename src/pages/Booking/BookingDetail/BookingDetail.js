@@ -10,8 +10,8 @@ import {
 //component
 import BookingDetailContent from '@components/booking/bookingDetail/bookingDetailContent';
 import * as actionBooking from '../../../store/action/booking';
-import TimePicker from '../../../components/booking/TimePicker/TimePicker';
 import COLORS from '../../../utils/colorUtils';
+import TimePicker from '../../TimePicker/TimePicker';
 
 const BookingDetail = ({navigation, route}) => {
   const {restaurant} = route.params;
@@ -21,6 +21,7 @@ const BookingDetail = ({navigation, route}) => {
   const [bookingName, setBookingName] = useState('');
   const [phNo, setPhNo] = useState();
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
+  const [Formatted, setFormatted] = useState('');
 
   const goBackHandler = () => {
     navigation.goBack();
@@ -33,10 +34,12 @@ const BookingDetail = ({navigation, route}) => {
       name: restaurant.name,
       photos: restaurant.photos,
       vicinity: restaurant.vicinity,
-      id: restaurant.id,
+      // id: restaurant.id,
+      time: Formatted,
     };
+    // console.log(data);
 
-    if (data.bookingName && data.phNo) {
+    if (data.bookingName && data.phNo && data.time) {
       dispatch(actionBooking.addBooking(data));
       navigation.goBack();
       ToastAndroid.show('Update Successful', ToastAndroid.SHORT);
@@ -45,18 +48,56 @@ const BookingDetail = ({navigation, route}) => {
     }
   };
 
+  //Confirm
+  const handleConfirm = data => {
+    setFormatted(FormatDate(data));
+    setModalVisible(false);
+  };
+
+  const FormatDate = data => {
+    let dateTimeString =
+      data.getDate() +
+      '/' +
+      (data.getMonth() + 1) +
+      '/' +
+      data.getFullYear() +
+      ' ';
+
+    var hours = data.getHours();
+    var minutes = data.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours % 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    dateTimeString = dateTimeString + hours + ':' + minutes + ' ' + ampm;
+
+    return dateTimeString;
+  };
+
+  //Cancel
+  const hideDatePicker = data => {
+    setDatePickerVisibility(false);
+  };
+
+  //Pick Date
+  const showDatePicker = () => {
+    setDatePickerVisibility(true);
+  };
   return (
     <View>
-      <View>
-        <BookingDetailContent
-          goBack={goBackHandler}
-          nameValue={bookingName}
-          onChangeName={value => setBookingName(value)}
-          noValue={phNo}
-          onChangeNo={value => setPhNo(value)}
-          confirm={confirmHandler}
-        />
-      </View>
+      <BookingDetailContent
+        goBack={goBackHandler}
+        nameValue={bookingName}
+        onChangeName={value => setBookingName(value)}
+        noValue={phNo}
+        onChangeNo={value => setPhNo(value)}
+        confirm={confirmHandler}
+        isVisible={isDatePickerVisible}
+        mode="datetime"
+        handleConfirm={handleConfirm}
+        hideDatePicker={hideDatePicker}
+        showDatePicker={showDatePicker}
+      />
     </View>
   );
 };

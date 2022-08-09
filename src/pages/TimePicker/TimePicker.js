@@ -4,16 +4,20 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 
 //Style
-import styles from './style';
+import Styles from './Style';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 //Component
-import COLORS from '../../../utils/colorUtils';
+import COLORS from '../../utils/colorUtils';
 
 const TimePicker = props => {
   return (
     <View>
       <TouchableOpacity onPress={props.showDatePicker}>
-        <View style={styles.datePicker}>
+        <View style={Styles.datePicker}>
           <Text style={{color: COLORS.BLACK, fontFamily: 'Montserrat-Light'}}>
             Pick Date
           </Text>

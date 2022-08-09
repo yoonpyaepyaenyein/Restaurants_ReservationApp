@@ -5,11 +5,11 @@ export const mocks = {
 };
 
 export const mockImages = [
-  'https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg',
-  'https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-oranges-ice-600x750.jpg',
-  'https://www.foodiesfeed.com/wp-content/uploads/2020/08/detail-of-pavlova-strawberry-piece-of-cake-600x800.jpg',
-  'https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-baking-600x750.jpg',
-  'https://www.foodiesfeed.com/wp-content/uploads/2019/04/mae-mu-pancakes-600x750.jpg',
-  'https://www.foodiesfeed.com/wp-content/uploads/2019/02/messy-pizza-on-a-black-table-600x400.jpg',
-  'https://www.foodiesfeed.com/wp-content/uploads/2019/02/pizza-ready-for-baking-600x400.jpg',
+  'https://gray-wvir-prod.cdn.arcpublishing.com/resizer/l_ZlW86PPJ0CTOQ6SDMPW4Si8KU=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/YMFAE4MTJZD5RIN2ZAZII2RRII.jpg',
+  'https://thefoodxp.com/wp-content/uploads/2020/05/Bonchon-Chicken.jpg',
+  'https://images.deliveryhero.io/image/fd-mm/LH/o4ns-hero.jpg',
+
+  'https://fastly.4sqi.net/img/general/600x600/24321027_KpEZ17QF2vKw6aYH_BmEFXkmKQGKxCEt1Myld4DAQMM.jpg',
+  'https://www.tastewindowmagazine.com/wp-content/uploads/2015/12/Ykko_1.jpg',
+  'https://res.klook.com/image/upload/activities/dgab9oasvjqrsrw35dbn.jpg',
 ];

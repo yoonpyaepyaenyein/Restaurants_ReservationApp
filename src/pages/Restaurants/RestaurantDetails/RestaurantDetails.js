@@ -9,7 +9,7 @@ import Styles from './Style';
 
 //Component
 import RestaurantDetailMenu from '@components/restaurants/restaurantDetail/restaurantDetailMenu';
-import * as actionBooking from '../../../store/action/booking';
+import * as actionBooking from '@store/action/booking';
 import BookingDetail from '../../Booking/BookingDetail/BookingDetail';
 
 const RestaurantDetails = ({route, navigation}) => {

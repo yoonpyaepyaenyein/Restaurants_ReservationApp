@@ -6,6 +6,7 @@ import styles from './style';
 
 //Component
 import COLORS from '../../utils/colorUtils';
+import TimePicker from '@pages/TimePicker/TimePicker';
 
 const AlertModal = props => {
   return (
@@ -28,7 +29,18 @@ const AlertModal = props => {
             onChangeText={props.onChangePhNo}
             keyboardType="number-pad"
           />
+
+          <View style={styles.datePicker}>
+            <TimePicker
+              isVisible={props.isVisible}
+              mode={props.mode}
+              handleConfirm={props.handleConfirm}
+              hideDatePicker={props.hideDatePicker}
+              showDatePicker={props.showDatePicker}
+            />
+          </View>
         </View>
+
         <View style={styles.btnContainer}>
           <TouchableOpacity
             style={styles.btnContent}

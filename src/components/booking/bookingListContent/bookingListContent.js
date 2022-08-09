@@ -35,17 +35,19 @@ const BookingListContent = props => {
               borderColor: COLORS.DARK_BLUE,
               borderWidth: wp(0.2),
               borderRadius: wp(3),
-              height: wp(15),
+              height: wp(20),
+              width: wp(65),
             }}>
             <View style={{paddingLeft: wp(3), paddingTop: wp(1)}}>
               <Text style={styles.name}>{item.bookingName}</Text>
               <Text style={styles.address}>{item.phNo}</Text>
+              <Text style={styles.address}>{item.time}</Text>
             </View>
             <View
               style={{
                 marginLeft: wp(10),
                 alignItems: 'center',
-                marginTop: wp(2),
+                marginTop: wp(4),
                 borderColor: COLORS.GRAY,
                 borderWidth: wp(0.1),
                 borderRadius: wp(1),
@@ -88,6 +90,7 @@ const BookingListContent = props => {
         contentContainerStyle={{paddingBottom: 80}}
         data={props.data}
         renderItem={renderComponent}
+        keyExtractor={(item, index) => index.toString()}
       />
     </SafeAreaView>
   );

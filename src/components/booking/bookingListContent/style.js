@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     color: COLORS.BLACK,
     fontSize: wp(3),
     fontFamily: 'Montserrat-Regular',
-    paddingTop: wp(3),
+    paddingTop: wp(2.5),
   },
 });
 

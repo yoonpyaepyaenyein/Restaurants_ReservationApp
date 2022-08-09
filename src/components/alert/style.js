@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
   },
   modalContainer: {
     width: wp(80),
-    height: hp(28),
+    height: hp(35),
     backgroundColor: '#fff',
     borderRadius: hp(0.3),
     borderRadius: wp(5),
@@ -45,6 +45,18 @@ const styles = StyleSheet.create({
     borderRadius: wp(2),
     marginTop: wp(3),
     paddingHorizontal: wp(3),
+    color: COLORS.BLACK,
+    fontFamily: 'Montserrat-Regular',
+  },
+  datePicker: {
+    marginTop: wp(3),
+    borderColor: '#ddd',
+    borderWidth: hp(0.2),
+    height: wp(10),
+    width: wp(25),
+    borderRadius: wp(2),
+    alignItems: 'center',
+    justifyContent: 'center',
     color: COLORS.BLACK,
   },
   btnContainer: {

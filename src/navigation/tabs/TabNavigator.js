@@ -18,6 +18,7 @@ import {RestaurantContext} from '../../context/context';
 import MapScreen from '@pages/maps/Map';
 import BookingStack from '../stack/BookingStack';
 import CartIcon from '@assets/icons/cart';
+import SettingStack from '../stack/SettingStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -92,8 +93,8 @@ const TabNavigator = () => {
           }}
         />
         <Tab.Screen
-          name="Setting"
-          component={Setting}
+          name="SettingStack"
+          component={SettingStack}
           options={{
             headerShown: false,
             title: 'Setting',

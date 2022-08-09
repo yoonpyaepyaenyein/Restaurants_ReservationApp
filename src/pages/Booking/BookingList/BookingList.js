@@ -8,12 +8,7 @@ import BookingListContent from '@components/booking/bookingListContent/bookingLi
 import * as actionBooking from '@store/action/booking';
 import AlertModal from '@components/alert/alertModal';
 
-const BookingList = ({navigation, route}) => {
-  // const {restaurant} = route.params;
-
-  const [showModal, setShowModal] = useState(false);
-  const [bookingName, setBookingName] = useState('');
-  const [phNo, setPhNo] = useState();
+const BookingList = ({navigation}) => {
   const dispatch = useDispatch();
 
   const booking = useSelector(state => state.bookingsList.bookingItems);
@@ -29,6 +24,7 @@ const BookingList = ({navigation, route}) => {
         photos: bookingData[key].photos,
         bookingName: bookingData[key].bookingName,
         phNo: bookingData[key].phNo,
+        time: bookingData[key].time,
       });
     }
 
@@ -44,29 +40,7 @@ const BookingList = ({navigation, route}) => {
   };
 
   const updateHandler = value => {
-    setShowModal(true);
-  };
-
-  const updateBookingHandler = () => {
-    let updateData = {
-      id: booking[0].id,
-      name: booking[0].name,
-      photos: booking[0].photos,
-      vicinity: booking[0].vicinity,
-      bookingName: bookingName,
-      phNo: phNo,
-    };
-    if (updateData.bookingName && updateData.phNo) {
-      dispatch(actionBooking.updateBookings(updateData));
-      setShowModal(false);
-      ToastAndroid.show('Booking Successful', ToastAndroid.SHORT);
-    } else {
-      ToastAndroid.show('Please Fill Information', ToastAndroid.SHORT);
-    }
-  };
-
-  const cancelHandler = () => {
-    setShowModal(false);
+    navigation.navigate('BookingUpdate', {data: value});
   };
 
   return (
@@ -77,17 +51,6 @@ const BookingList = ({navigation, route}) => {
         update={updateHandler}
         goBack={goBackHandler}
       />
-
-      {showModal && (
-        <AlertModal
-          cancelUpdate={cancelHandler}
-          bookingUpdate={updateBookingHandler}
-          bookingNameValue={bookingName}
-          onChangeBookingName={value => setBookingName(value)}
-          phNoValue={phNo}
-          onChangePhNo={value => setPhNo(value)}
-        />
-      )}
     </View>
   );
 };

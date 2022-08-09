@@ -9,18 +9,18 @@ import {
 } from 'react-native-responsive-screen';
 
 //Component
-import BackIcon from '@assets/icons/back';
-import COLORS from '../../../utils/colorUtils';
 import TimePicker from '../../../pages/TimePicker/TimePicker';
+import BackIcon from '../../../../assets/icons/back';
+import COLORS from '../../../utils/colorUtils';
 
-const BookingDetailContent = props => {
+const UpdateBooking = props => {
   return (
     <View>
       <View style={styles.headerContainer}>
         <TouchableOpacity style={styles.back} onPress={props.goBack}>
           <BackIcon width={hp(3)} height={hp(3)} color={COLORS.BLACK} />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Book a table</Text>
+        <Text style={styles.headerTitle}>Update Data</Text>
       </View>
       <View style={styles.inputContainer}>
         <Text style={styles.title}>Please fill information</Text>
@@ -36,8 +36,8 @@ const BookingDetailContent = props => {
           style={styles.infoInput}
           placeholder="Ph no...."
           placeholderTextColor={COLORS.GRAY}
-          value={props.noValue}
-          onChangeText={props.onChangeNo}
+          value={props.phNoValue}
+          onChangeText={props.onChangePhNo}
           keyboardType="number-pad"
         />
         <View style={styles.datePicker}>
@@ -49,21 +49,14 @@ const BookingDetailContent = props => {
             showDatePicker={props.showDatePicker}
           />
         </View>
-        {/* <TouchableOpacity>
-          <View style={styles.datePicker}>
-            <Text style={{color: COLORS.BLACK, fontFamily: 'Montserrat-Light'}}>
-              Pick Date
-            </Text>
-          </View>
-        </TouchableOpacity> */}
       </View>
       <View style={{marginTop: wp(30), alignItems: 'center'}}>
-        <TouchableOpacity onPress={props.confirm}>
-          <Text style={{color: COLORS.BLACK}}>CONFIRM</Text>
+        <TouchableOpacity onPress={props.update}>
+          <Text style={{color: COLORS.BLACK}}>UPDATE</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 };
 
-export default BookingDetailContent;
+export default UpdateBooking;
