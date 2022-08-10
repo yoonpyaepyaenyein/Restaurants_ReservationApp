@@ -23,7 +23,6 @@ const SettingFav = ({navigation}) => {
       style={{
         flex: 1,
         paddingVertical: wp(5),
-        // paddingHorizontal: wp(),
       }}>
       <View
         style={{

@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     color: COLORS.BLACK,
+    marginTop: wp(6),
   },
   signOut: {
     color: COLORS.BLACK,

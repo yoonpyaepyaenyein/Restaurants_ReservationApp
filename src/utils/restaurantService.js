@@ -1,5 +1,5 @@
 import camelize from 'camelize';
-import {mockImages, mocks} from '../data/index';
+import {mocks} from '../data/index';
 
 /*restaurant request*/
 export const restaurantsRequest = (location = '16.8409,96.1735') => {
@@ -13,10 +13,6 @@ export const restaurantsRequest = (location = '16.8409,96.1735') => {
 };
 export const restaurantsTransform = ({results = []}) => {
   const mappedResults = results.map(restaurant => {
-    restaurant.photos = restaurant.photos.map(p => {
-      return mockImages[Math.ceil(Math.random() * (mockImages.length - 1))];
-    });
-
     return {
       ...restaurant,
       address: restaurant.vicinity,

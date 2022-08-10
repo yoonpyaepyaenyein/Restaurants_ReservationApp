@@ -8,9 +8,6 @@ import {appStorage} from '../../utils/appStorage';
 
 const Setting = ({navigation}) => {
   const {auth, getAuth, userInfo} = useContext(AuthContext);
-  // useEffect(() => {
-  //   console.log('userinfo>>>', userInfo);
-  // }, []);
 
   const favouritesHandler = () => {
     navigation.navigate('SettingFavourite');
@@ -21,19 +18,6 @@ const Setting = ({navigation}) => {
     getAuth(false);
     ToastAndroid.show('logout successful', ToastAndroid.SHORT);
   };
-
-  // const logoutHandler = () => {
-  //   auths()
-  //     .signOut()
-  //     .then(
-  //       () => ToastAndroid.show('Logout SuccessFul', ToastAndroid.SHORT),
-  //       getAuth(false),
-  //     )
-
-  //     .catch(error => {
-  //       console.log('error', error);
-  //     });
-  // };
 
   return (
     <SettingHeader

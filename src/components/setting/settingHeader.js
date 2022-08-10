@@ -36,29 +36,31 @@ const SettingHeader = props => {
       </View>
 
       {/* Favourite */}
-      <TouchableOpacity onPress={props.favourites}>
-        <View style={styles.favContainer}>
-          <View style={styles.heart}>
-            <HeartIcon width={hp(5)} height={hp(5)} colors={COLORS.BLACK} />
-          </View>
+
+      <View style={styles.favContainer}>
+        <View style={styles.heart}>
+          <HeartIcon width={hp(5)} height={hp(5)} colors={COLORS.BLACK} />
+        </View>
+        <TouchableOpacity onPress={props.favourites}>
           <View style={styles.text}>
             <Text style={styles.favText}>Favourites</Text>
             <Text style={styles.favText}>View to your favourites</Text>
           </View>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
 
       {/* Logout */}
-      <TouchableOpacity onPress={props.logout}>
-        <View style={styles.logoutContainer}>
-          <View style={styles.logout}>
-            <LogoutIcon width={hp(5)} height={hp(5)} colors={COLORS.BLACK} />
-          </View>
+
+      <View style={styles.logoutContainer}>
+        <View style={styles.logout}>
+          <LogoutIcon width={hp(5)} height={hp(5)} colors={COLORS.BLACK} />
+        </View>
+        <TouchableOpacity onPress={props.logout}>
           <View style={styles.logoutText}>
             <Text style={styles.signOut}>Logout</Text>
           </View>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

@@ -31,7 +31,7 @@ const RestaurantInfoCard = props => {
           <Card.Cover
             key={props.restaurant.name}
             style={styles.cover}
-            source={{uri: props.restaurant.photos[0]}}
+            source={{uri: props.restaurant.photos}}
           />
         </View>
         <View style={styles.info}>

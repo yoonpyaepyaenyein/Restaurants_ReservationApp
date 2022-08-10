@@ -14,7 +14,7 @@ const CompactRestaurantInfo = props => {
         <Image
           style={styles.image}
           source={{
-            uri: props.restaurant.photos[0],
+            uri: props.restaurant.photos,
           }}
           resizeMode={'cover'}
         />

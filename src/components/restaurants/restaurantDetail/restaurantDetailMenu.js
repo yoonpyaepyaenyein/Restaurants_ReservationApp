@@ -28,7 +28,7 @@ const RestaurantDetailMenu = props => {
     <SafeAreaView>
       <View>
         <ImageBackground
-          source={{uri: props.restaurant.photos[0]}}
+          source={{uri: props.restaurant.photos}}
           resizeMode="cover"
           style={styles.imageBackground}>
           <View
@@ -71,30 +71,6 @@ const RestaurantDetailMenu = props => {
       <View style={styles.desContainer}>
         <Text style={styles.description}>{props.restaurant.description}</Text>
       </View>
-      {/* <View
-        style={{
-          height: 50,
-          marginTop: wp(48),
-          flexDirection: 'row',
-          justifyContent: 'space-around',
-          marginHorizontal: wp(5),
-        }}>
-        <TouchableOpacity>
-          <View style={styles.bookInfo}>
-            <Text>Date</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <View style={styles.bookInfo}>
-            <Text>Time</Text>
-          </View>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <View style={styles.bookInfo}>
-            <Text>Guest</Text>
-          </View>
-        </TouchableOpacity>
-      </View> */}
 
       <View style={styles.footer}>
         <TouchableOpacity onPress={props.booking} style={styles.btn}>
