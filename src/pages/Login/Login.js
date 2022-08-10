@@ -1,9 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {View, Text, ToastAndroid} from 'react-native';
-import auths from '@react-native-firebase/auth';
-
-//Style
-import Styles from './Style';
+import {ToastAndroid} from 'react-native';
 
 //Components
 import LoginHeader from '@components/login/loginHeader';
@@ -14,29 +10,29 @@ const Login = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const {auth, getAuth, deviceToken} = useContext(AuthContext);
+  const {auth, getAuth, getUserInfo} = useContext(AuthContext);
 
   const loginHandler = () => {
-    auths()
-      .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        console.log('User account signed success!');
-        appStorage.setItem('@device.token', deviceToken);
+    let token = '1234567890';
 
-        getAuth(true);
-        ToastAndroid.show('Login Successful', ToastAndroid.SHORT);
-      })
-      .catch(error => {
-        if (error.code === 'auth/invalid-email') {
-          console.log('That email address is invalid!');
-          ToastAndroid.show(
-            'That email address is invalid!',
-            ToastAndroid.SHORT,
-          );
+    try {
+      const data = appStorage.getItem('@user.data');
+      if (data) {
+        const formatData = JSON.parse(data);
+        if (formatData.email === email && formatData.password === password) {
+          getAuth(true);
+          getUserInfo(formatData);
+          appStorage.setItem('@user.token', token);
+          ToastAndroid.show(loginSuccess, ToastAndroid.SHORT);
+        } else {
+          ToastAndroid.show('Something Wrong', ToastAndroid.SHORT);
         }
-
-        console.error(error);
-      });
+      } else {
+        ToastAndroid.show('Try Again', ToastAndroid.SHORT);
+      }
+    } catch (error) {
+      console.log('error', error);
+    }
   };
 
   return (

@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
-import messaging from '@react-native-firebase/messaging';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Provider} from 'react-redux';
 
@@ -18,7 +17,7 @@ import TabNavigator from './tabs/TabNavigator';
 
 const AppNavigator = () => {
   const [auth, setAuth] = useState(false);
-  const [deviceToken, setDeviceToken] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
   const [splash, setSplash] = useState(true);
   const [restaurants, setRestaurants] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -31,9 +30,10 @@ const AppNavigator = () => {
     getAuth: value => {
       setAuth(value);
     },
-    deviceToken,
-    getDeviceToken: value => {
-      setDeviceToken(value);
+
+    userInfo,
+    getUserInfo: value => {
+      setUserInfo(value);
     },
   };
 
@@ -86,7 +86,6 @@ const AppNavigator = () => {
   /*Component Mounted*/
   useEffect(() => {
     getData();
-    getToken();
     loadFavourites();
   }, []);
 
@@ -94,24 +93,15 @@ const AppNavigator = () => {
     saveFavourites(favourite);
   }, [favourite]);
 
-  /* Storing Firebase Token */
-  const getToken = async () => {
-    const fcmToken = await messaging().getToken();
-    if (fcmToken) {
-      appStorage.setItem('@device.token', fcmToken);
-      setDeviceToken(fcmToken);
-    } else {
-      console.log('token error');
-    }
-  };
-
   /*Authentication*/
   const getData = () => {
     try {
-      const data = appStorage.getItem('@device.token');
+      const data = appStorage.getItem('@user.token');
       const userData = appStorage.getItem('@user.data');
+
       if (data) {
         setAuth(true);
+        setUserInfo(JSON.parse(userData));
         setTimeout(() => {
           setSplash(false);
         }, 2000);

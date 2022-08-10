@@ -15,7 +15,7 @@ const DashboardStack = ({navigation, route}) => {
       'DashboardStack',
       'RestaurantInfo',
       'BookingStack',
-      ' BookingDetail',
+      'BookingDetail',
       'Map',
     ];
     let routeName = getFocusedRouteNameFromRoute(route);

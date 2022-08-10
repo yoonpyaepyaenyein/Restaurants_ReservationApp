@@ -1,15 +1,11 @@
 import React, {useState, useContext, useEffect} from 'react';
-import {View, Text, ToastAndroid} from 'react-native';
-import auths from '@react-native-firebase/auth';
-
-//Style
-import Styles from './Style';
+import {ToastAndroid} from 'react-native';
 
 //Component
 import RegisterHeader from '@components/register/registerHeader';
 import {appStorage} from '../../utils/appStorage';
 import {AuthContext} from '../../context/context';
-import {encryptData, decryptData} from '../../utils/secureData';
+import {err} from 'react-native-svg/lib/typescript/xml';
 
 const Register = ({navigation}) => {
   const [name, setName] = useState('');
@@ -17,44 +13,28 @@ const Register = ({navigation}) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
-  const {deviceToken, auth, getAuth} = useContext(AuthContext);
+  const {auth, getAuth, getUserInfo} = useContext(AuthContext);
 
   const registerHandler = () => {
+    let token = '1234567890';
     let userData = {
       name: name,
       email: email,
       password: password,
       confirmPassword: confirmPassword,
     };
-
-    if (email && password) {
-      auths()
-        .createUserWithEmailAndPassword(email, password)
-        .then(() => {
-          console.log('User account create & signed in!');
-          appStorage.setItem('@device.token', deviceToken);
-          getAuth(true);
-          ToastAndroid.show('Registration Successfully', ToastAndroid.SHORT);
-        })
-        .catch(error => {
-          if (error.code === 'auth/email-already-in-use') {
-            console.log('That email address is already in use!');
-            ToastAndroid.show(
-              'That email address is already in use!',
-              ToastAndroid.SHORT,
-            );
-          }
-
-          if (error.code === 'auth/invalid-email') {
-            console.log('That email address is invalid!');
-            ToastAndroid.show(
-              'That email address is invalid!',
-              ToastAndroid.SHORT,
-            );
-          }
-
-          console.error(error);
-        });
+    if (name && email && password && password === confirmPassword) {
+      try {
+        appStorage.setItem('@user.data', JSON.stringify(userData));
+        appStorage.setItem('@user.token', token);
+        getAuth(true);
+        getUserInfo(userData);
+      } catch (error) {
+        console.log('error', error);
+      }
+    } else {
+      getAuth(false);
+      ToastAndroid.show('Register failed!, Try Again', ToastAndroid.SHORT);
     }
   };
 
