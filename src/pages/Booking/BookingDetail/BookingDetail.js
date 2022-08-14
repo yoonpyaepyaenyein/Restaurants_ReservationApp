@@ -16,7 +16,6 @@ import TimePicker from '../../TimePicker/TimePicker';
 const BookingDetail = ({navigation, route}) => {
   const {restaurant} = route.params;
   const dispatch = useDispatch();
-  // console.log('restaurant>>>', restaurant);
 
   const [bookingName, setBookingName] = useState('');
   const [phNo, setPhNo] = useState();
@@ -34,15 +33,13 @@ const BookingDetail = ({navigation, route}) => {
       name: restaurant.name,
       photos: restaurant.photos,
       vicinity: restaurant.vicinity,
-      // id: restaurant.id,
       time: Formatted,
     };
-    // console.log(data);
 
     if (data.bookingName && data.phNo && data.time) {
       dispatch(actionBooking.addBooking(data));
       navigation.goBack();
-      ToastAndroid.show('Update Successful', ToastAndroid.SHORT);
+      ToastAndroid.show('Add Successful', ToastAndroid.SHORT);
     } else {
       ToastAndroid.show('Please Fill Information', ToastAndroid.SHORT);
     }

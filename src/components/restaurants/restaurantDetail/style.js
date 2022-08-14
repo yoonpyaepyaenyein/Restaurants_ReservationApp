@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
     paddingTop: wp(6),
     fontFamily: 'Montserrat-Regular',
     fontSize: wp(3.2),
+    lineHeight: wp(7),
   },
 
   desContainer: {

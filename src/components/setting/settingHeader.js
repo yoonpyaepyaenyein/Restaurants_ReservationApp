@@ -39,7 +39,7 @@ const SettingHeader = props => {
 
       <View style={styles.favContainer}>
         <View style={styles.heart}>
-          <HeartIcon width={hp(5)} height={hp(5)} colors={COLORS.JAFFA} />
+          <HeartIcon width={hp(5)} height={hp(5)} colors={COLORS.BLUE_VIOLET} />
         </View>
         <TouchableOpacity onPress={props.favourites}>
           <View style={styles.text}>
@@ -53,7 +53,11 @@ const SettingHeader = props => {
 
       <View style={styles.logoutContainer}>
         <View style={styles.logout}>
-          <LogoutIcon width={hp(5)} height={hp(5)} colors={COLORS.JAFFA} />
+          <LogoutIcon
+            width={hp(5)}
+            height={hp(5)}
+            colors={COLORS.BLUE_VIOLET}
+          />
         </View>
         <TouchableOpacity onPress={props.logout}>
           <View style={styles.logoutText}>

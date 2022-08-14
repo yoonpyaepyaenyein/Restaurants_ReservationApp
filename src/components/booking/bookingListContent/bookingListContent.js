@@ -89,8 +89,13 @@ const BookingListContent = props => {
       />
     </View>
   ) : (
-    <View>
-      <Text style={{color: COLORS.SHARK}}>Null</Text>
+    <View style={styles.noResultCon}>
+      <Image
+        source={require('../../../../assets/images/empty.png')}
+        style={styles.emptyImage}
+      />
+      <Text style={styles.yet}>No Booking, yet.</Text>
+      <Text style={styles.bookText}>You don't have any booking list.</Text>
     </View>
   );
 };

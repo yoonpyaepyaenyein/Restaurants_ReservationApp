@@ -37,11 +37,13 @@ const Welcome = ({navigation}) => {
 
   return (
     <LinearGradient
-      colors={[COLORS.GRADIENT_1, COLORS.GRADIENT_2, COLORS.GRADIENT_3]}
+      colors={[COLORS.WHISPER, COLORS.WHISPER, COLORS.WHISPER]}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
       style={styles.container}>
       <View style={styles.topPart}>
-        <Text style={styles.bookTextStyle}>BUTTER</Text>
-        {/* <Text style={styles.bookTextStyle}>TER</Text> */}
+        <Text style={styles.bookTextStyle}>EATERY</Text>
+        <Text style={styles.res}>restaurants for you</Text>
       </View>
       <Animated.View style={[styles.bottomPart, {flex: bottomFlex}]}>
         {startClicked ? (

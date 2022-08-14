@@ -8,20 +8,21 @@ import COLORS from '../../utils/colorUtils';
 
 const styles = StyleSheet.create({
   orangeButtonStyle: {
-    backgroundColor: '#f1f1f1',
+    backgroundColor: COLORS.BLUE_VIOLET,
     height: hp(6),
     width: wp(40),
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: wp(4),
-    // shadowColor: COLORS.GRAY,
-    // shadowOffset: {width: 0, height: 4},
-    // shadowOpacity: 0.3,
-    // shadowRadius: 5,
-    // elevation: 5,
+    shadowColor: COLORS.SHARK,
+    shadowOffset: {width: 0, height: 4},
+    shadowOpacity: 0.3,
+    shadowRadius: 5,
+    elevation: 5,
+    borderColor: COLORS.SHARK,
   },
   startText: {
-    color: COLORS.BLACK,
+    color: COLORS.WHISPER,
     fontFamily: 'Montserrat-Regular',
     letterSpacing: wp(0.5),
   },

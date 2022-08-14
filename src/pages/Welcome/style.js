@@ -20,9 +20,14 @@ const styles = StyleSheet.create({
     paddingVertical: hp(10),
   },
   bookTextStyle: {
-    color: COLORS.BLACK,
-    fontSize: wp(14),
+    color: COLORS.BLUE_VIOLET,
+    fontSize: wp(10),
     letterSpacing: wp(4),
+    fontFamily: 'Montserrat-BoldItalic',
+  },
+  res: {
+    // fontFamily: 'Montserrat-Light',
+    color: COLORS.BLUE_VIOLET,
     fontFamily: 'Montserrat-Light',
   },
 
@@ -34,7 +39,7 @@ const styles = StyleSheet.create({
     marginVertical: wp(5),
   },
   oRText: {
-    color: COLORS.BLACK,
+    color: COLORS.SHARK,
     fontSize: hp(2),
     fontFamily: 'Montserrat-Bold',
   },

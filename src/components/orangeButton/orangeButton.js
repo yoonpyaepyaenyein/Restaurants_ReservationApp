@@ -11,7 +11,7 @@ const OrangeButton = props => {
     <View>
       <TouchableOpacity onPress={props.startCLick}>
         <LinearGradient
-          colors={[COLORS.GRADIENT_1, '#ddd', COLORS.GRADIENT_3]}
+          colors={[COLORS.BLUE_VIOLET, COLORS.BLUE_VIOLET, COLORS.BLUE_VIOLET]}
           start={{x: 0, y: 0}}
           end={{x: 1, y: 1}}
           style={styles.orangeButtonStyle}>

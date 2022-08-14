@@ -27,6 +27,7 @@ const AppNavigator = () => {
   const [error, setError] = useState(null);
   const [favourite, setFavourite] = useState([]);
   const [lang, setLang] = useState('en');
+  const [viewOnboarding, setViewedOnboarding] = useState(false);
 
   /*Auth Context*/
   const context = {
@@ -141,7 +142,7 @@ const AppNavigator = () => {
           source={require('../../assets/images/splash1.json')}
           autoPlay
           loop={false}
-          speed={0.5}
+          speed={0.6}
         />
       </View>
     );

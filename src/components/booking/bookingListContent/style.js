@@ -125,113 +125,28 @@ const styles = StyleSheet.create({
     paddingTop: wp(2),
     marginRight: wp(10),
   },
-  // timeCon: {
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   marginTop: wp(-43),
-  //   paddingLeft: wp(4),
-  // },
-  // time: {
-  //   color: COLORS.BLACK,
-  //   fontFamily: 'Montserrat-Regular',
-  //   paddingLeft: wp(3),
-  // },
-  // restaurantCon: {
-  //   marginLeft: wp(-48),
-  //   marginBottom: wp(15),
-  //   flexDirection: 'row',
-  // },
-  // resName: {
-  //   color: COLORS.SHARK,
-  //   fontSize: wp(3.2),
-  //   fontFamily: 'Montserrat-Bold',
-  // },
-  // address: {
-  //   color: COLORS.SHARK,
-  //   fontSize: wp(3),
-  //   fontFamily: 'Montserrat-Regular',
-  //   paddingTop: wp(2),
-  // },
-  // image: {
-  //   height: hp(7),
-  //   width: hp(10),
-  //   marginLeft: wp(5),
-  //   borderWidth: wp(0.2),
-  //   borderRadius: wp(1),
-  //   marginTop: wp(-4),
-  // },
-  // bookingContainer: {
-  //   marginTop: wp(19),
-  //   marginHorizontal: wp(-80),
-  // },
-  // bookingUserCon: {
-  //   flexDirection: 'row',
-  //   // marginTop: wp(20),
-  // },
-  // bookingName: {
-  //   paddingLeft: wp(5),
-  //   fontFamily: 'Montserrat-Regular',
-  //   color: COLORS.SHARK,
-  // },
-  // bookingPhNoCon: {
-  //   flexDirection: 'row',
-  //   paddingTop: wp(2),
-  //   alignItems: 'center',
-  //   paddingLeft: wp(1),
-  // },
-  // phNo: {
-  //   paddingLeft: wp(6),
-  //   fontFamily: 'Montserrat-Regular',
-  //   color: COLORS.SHARK,
-  // },
-  // line: {
-  //   width: wp(80),
-  //   height: hp(0.1),
-  //   backgroundColor: COLORS.KIMBERLY,
-  //   alignSelf: 'center',
-  //   marginTop: wp(2),
-  //   color: COLORS.GRAY,
-  //   // paddingTop: wp(1),
-  // },
-  // header: {
-  //   paddingVertical: 20,
-  //   flexDirection: 'row',
-  //   alignItems: 'center',
-  //   marginHorizontal: 20,
-  //   overflow: 'hidden',
-  // },
-  // image: {
-  //   height: hp(11),
-  //   width: hp(12),
-  //   marginLeft: wp(1),
-  //   borderWidth: wp(0.2),
-  //   borderRadius: wp(2),
-  // },
-  // title: {
-  //   color: COLORS.DARK_BLUE,
-  //   fontSize: wp(4),
-  //   fontFamily: 'Montserrat-Bold',
-  //   paddingLeft: wp(3),
-  // },
-
-  // textContainer: {
-  //   height: 100,
-  //   marginLeft: 10,
-  //   paddingVertical: 20,
-  //   flex: 1,
-  //   justifyContent: 'center',
-  // },
-  // name: {
-  //   color: COLORS.BLACK,
-  //   fontSize: wp(3.2),
-  //   fontFamily: 'Montserrat-Bold',
-  // },
-  // address: {
-  //   color: COLORS.BLACK,
-  //   fontSize: wp(3),
-  //   fontFamily: 'Montserrat-Regular',
-  //   paddingTop: wp(2.5),
-  // },
+  noResultCon: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+    backgroundColor: COLORS.WHITE,
+  },
+  yet: {
+    color: COLORS.BLUE_VIOLET,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: wp(4),
+  },
+  bookText: {
+    color: COLORS.GRAY,
+    fontFamily: 'Montserrat-Regular',
+    paddingTop: wp(3),
+  },
+  emptyImage: {
+    width: wp(60),
+    height: wp(60),
+    borderRadius: wp(3),
+    marginBottom: wp(15),
+  },
 });
 
 export default styles;

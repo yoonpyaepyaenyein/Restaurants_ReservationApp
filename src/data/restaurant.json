@@ -20,8 +20,9 @@
           }
         }
       },
+      "description": "The Ritz offers opulent fine dining in Mayfair at our Michelin-starred restaurant. Enjoy the finest cuisine in our spectacular dining room.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "The Ritz Restaurant ",
+      "name": "The Ritz Restaurant",
       "opening_hours": {
         "open_now": true
       },
@@ -50,8 +51,9 @@
           }
         }
       },
+      "description": "Known for the best Italian food at the Jersey Shore, Fratello's has won the Boss of the Sauce competition five years in a row! Come by for dinner and the best .",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Fratello Restaurant ",
+      "name": "Fratello Restaurant",
       "opening_hours": {
         "open_now": true
       },
@@ -80,6 +82,7 @@
           }
         }
       },
+      "description": "Le Cellier Signature Poutine. Fresh-cut French Fries, Canadian Cheddar Cheese Curds, Truffle, Red Wine Reduction.  Le Cellier Beef Bourguignon Poutine.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "Le Cellier ",
       "permanently_closed": true,
@@ -115,8 +118,9 @@
           }
         }
       },
+      "description": "Taing Yin Thar Restaurant offers you a wide variety of dishes.It is the best Myanmar National Restaurant in yangon and give delivery service and catering service restaurant",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Taing Yin Thar Restaurant,",
+      "name": "Taing Yin Thar Restaurant",
       "opening_hours": {
         "open_now": true
       },
@@ -147,6 +151,7 @@
           }
         }
       },
+      "description": "At the Full Service level, our catering team will handle every detail of your event. This includes menu planning, buffet set-up, serving guests, clean up.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "Together BBQ Restaurant",
       "opening_hours": {
@@ -220,8 +225,9 @@
           }
         }
       },
+      "description": "Oriental House Thakayta, the comers can experience the amazing Chinese dishes and dim sums that are prepared with culinary skills and incisive expertise.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
-      "name": "Oriental House Thakayta ",
+      "name": "Oriental House Thakayta",
       "opening_hours": {
         "open_now": true
       },
@@ -259,6 +265,7 @@
           }
         }
       },
+
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
       "name": "Omuk",
       "permanently_closed": true,
@@ -278,7 +285,7 @@
       ],
       "user_ratings_total": 490,
       "vicinity": "မင်းနန္ဒာလမ်း, Yangon, Myanmar",
-      "description": "LOTTERIA Co., Ltd. (株式会社ロッテリア, Kabushiki-gaisha Rotteria) is a Japanese company that operates a chain of fast food restaurants in East Asia, having opened its first restaurant in Tokyo in September 1972., "
+      "description": "OM is a pioneering and leading voice recording and face capture team working with video games and animation. The studios are unique and specifically Fishcake is called eomuk or odeng"
     },
     {
       "business_status": "OPERATIONAL",
@@ -339,6 +346,7 @@
           }
         }
       },
+      "description": "Fisherman's Wharf offer casual fine dining with a view of the water from every table. Enjoy the sunset from our deck. Daily Seafood Specials and Unique dishes for the non-seafood lover",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "Fisherman's Wharf",
       "opening_hours": {
@@ -371,6 +379,7 @@
           }
         }
       },
+      "description": "JOJO HoTpoT SET MENU TOMATO. Jo Jo Hotpot Menu List (1).Itwas opened in 2018 and it is popular because of its various kinds of seafood, vegetables, meats and tasteful hotpot.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "JoJo Hotpot",
       "opening_hours": {
@@ -403,6 +412,7 @@
           }
         }
       },
+      "description": "We use 100% grass-fed beef, brimming with authentic, intense savory flavors that deliver bold taste even when paired with our buns and vegetables.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "Lotteria",
       "opening_hours": {
@@ -435,6 +445,7 @@
           }
         }
       },
+      "description": "The Golden Duck is a family-owned and operated Chinese restaurant.In addition to the regular menu, many traditional dishes are available daily.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "Golden Duck",
       "permanently_closed": true,
@@ -466,6 +477,7 @@
           }
         }
       },
+      "description": "Since then, YKKO has sought to accentuate the Kyay-Oh dining experience by placing emphasis on convenience, clean and tasty noodles.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "YKKO",
       "opening_hours": {
@@ -505,6 +517,7 @@
           }
         }
       },
+      "description": "Burma Bistro presents authentic Burmese cuisine with the long experienced chefs.Our specialties include the ever popular Tea Leaf Salad, a variety of noodle soups",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "Burma Bistro",
       "opening_hours": {
@@ -538,6 +551,7 @@
           }
         }
       },
+      "description": "Bamboo House Restaurant shines a new light on modern Indian cuisine bringing an exciting combination of amazing flavours, aroma and colourful presentation to satisfy every taste.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
       "name": "House of Bamboo Indian Restaurant ",
       "opening_hours": {
@@ -579,6 +593,7 @@
           }
         }
       },
+      "description": "We are a full dine-in restaurant located just above the Kay Street promenade. Dine in on our spacious floor, semi-private glass room, or private Karaoke room.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "Oishii Sushi",
       "opening_hours": {
@@ -612,6 +627,7 @@
           }
         }
       },
+      "description": "Bushido offers affordable group dining for 20-80 with warm, izakaya inspired flair and the epitome of Japanese hospitality.Whether you are reserving our private.",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
       "name": "Bushido",
       "opening_hours": {
@@ -645,6 +661,7 @@
           }
         }
       },
+      "description": "View V Hangout Restaurant & Bar menu and order online for takeout and fast delivery. Your space in the city. Dinner with friends and thirst quenching post work cocktails",
       "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
       "name": "V Hangout Restaurant & Bar",
       "opening_hours": {

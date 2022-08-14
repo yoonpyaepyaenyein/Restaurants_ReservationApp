@@ -32,7 +32,7 @@ const Login = ({navigation}) => {
           getAuth(true);
           getUserInfo(formatData);
           appStorage.setItem('@user.token', token);
-          ToastAndroid.show(loginSuccess, ToastAndroid.SHORT);
+          ToastAndroid.show('loginSuccess', ToastAndroid.SHORT);
         } else {
           ToastAndroid.show('Something Wrong', ToastAndroid.SHORT);
         }

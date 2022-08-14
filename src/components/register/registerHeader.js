@@ -68,7 +68,7 @@ const RegisterHeader = props => {
         <TouchableOpacity
           style={styles.regTextContainer}
           onPress={props.goLogin}>
-          <Text style={styles.regText}>{local.register}</Text>
+          <Text style={styles.regText}>{local.login}</Text>
         </TouchableOpacity>
       </View>
     </View>
