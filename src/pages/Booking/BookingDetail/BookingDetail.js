@@ -57,11 +57,11 @@ const BookingDetail = ({navigation, route}) => {
   const FormatDate = data => {
     let dateTimeString =
       data.getDate() +
-      '/' +
+      '-' +
       (data.getMonth() + 1) +
-      '/' +
+      '-' +
       data.getFullYear() +
-      ' ';
+      ' at ';
 
     var hours = data.getHours();
     var minutes = data.getMinutes();

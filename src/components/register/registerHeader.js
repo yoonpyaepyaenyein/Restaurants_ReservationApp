@@ -5,33 +5,37 @@ import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 import styles from './style';
 import COLORS from '../../utils/colorUtils';
 import LinearGradient from 'react-native-linear-gradient';
+import {useLocal} from '../../hook/useLocal';
 
 const RegisterHeader = props => {
+  const local = useLocal();
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to BUTTER</Text>
+      <Text style={styles.title}>Hello !</Text>
+      <Text style={styles.welcome}>Signup to</Text>
+      <Text style={styles.back}>get started</Text>
 
-      <Text style={styles.subTitle}>Create A New Account</Text>
+      {/* <Text style={styles.subTitle}>Create A New Account</Text> */}
 
       {/* input Section */}
       <View style={styles.inputContainer}>
         <TextInput
           value={props.userName}
-          placeholder="Username"
+          placeholder={local.userName}
           placeholderTextColor={COLORS.GRAY}
           style={styles.emailInput}
           onChangeText={props.onChangeName}
         />
         <TextInput
           value={props.emailValue}
-          placeholder="Email"
+          placeholder={local.emailPlaceholder}
           placeholderTextColor={COLORS.GRAY}
           style={styles.emailInput}
           onChangeText={props.onChangeEmail}
         />
         <TextInput
           value={props.passValue}
-          placeholder="Password"
+          placeholder={local.passwordPlaceholder}
           placeholderTextColor={COLORS.GRAY}
           style={styles.emailInput}
           onChangeText={props.onChangePass}
@@ -39,7 +43,7 @@ const RegisterHeader = props => {
         />
         <TextInput
           value={props.confirmPassValue}
-          placeholder="Confirm Password"
+          placeholder={local.confirmPasswordPlaceholder}
           placeholderTextColor={COLORS.GRAY}
           style={styles.emailInput}
           onChangeText={props.onChangeConfirmPass}
@@ -51,20 +55,20 @@ const RegisterHeader = props => {
       <View style={styles.btnContainer}>
         <TouchableOpacity onPress={props.goRegister}>
           <LinearGradient
-            colors={[COLORS.GRADIENT_3, COLORS.GRADIENT_3, COLORS.GRADIENT_1]}
+            colors={[COLORS.KIMBERLY, COLORS.BLUE_VIOLET, COLORS.GRADIENT_1]}
             start={{x: 0, y: 0}}
             end={{x: 1, y: 1}}
             style={styles.btnContent}>
-            <Text style={styles.loginText}>Register</Text>
+            <Text style={styles.loginText}>{local.register}</Text>
           </LinearGradient>
         </TouchableOpacity>
       </View>
       <View style={styles.qContainer}>
-        <Text style={styles.qText}>Already have an account? </Text>
+        <Text style={styles.qText}>{local.loginText} </Text>
         <TouchableOpacity
           style={styles.regTextContainer}
           onPress={props.goLogin}>
-          <Text style={styles.regText}>LOGIN</Text>
+          <Text style={styles.regText}>{local.register}</Text>
         </TouchableOpacity>
       </View>
     </View>

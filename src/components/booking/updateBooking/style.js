@@ -9,6 +9,34 @@ import {
 import COLORS from '../../../utils/colorUtils';
 
 const styles = StyleSheet.create({
+  container: {
+    height: wp(25),
+    backgroundColor: COLORS.BLUE_VIOLET,
+    paddingBottom: wp(3),
+  },
+  backCon: {
+    backgroundColor: COLORS.JAFFA,
+    // marginHorizontal: wp(3),
+    marginVertical: wp(5),
+    marginLeft: wp(6),
+    width: wp(7),
+    height: hp(4),
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderColor: COLORS.JAFFA,
+    borderWidth: wp(0.2),
+    borderRadius: wp(3),
+  },
+  nameInfo: {
+    paddingTop: wp(5),
+    paddingHorizontal: wp(10),
+  },
+
+  name: {
+    fontFamily: 'Montserrat-Bold',
+    fontSize: wp(5),
+    color: COLORS.WHITE,
+  },
   headerContainer: {
     flexDirection: 'row',
     marginTop: wp(5),
@@ -22,21 +50,22 @@ const styles = StyleSheet.create({
     color: COLORS.BLACK,
   },
   inputContainer: {
-    marginTop: wp(12),
+    marginTop: wp(3),
     height: hp(30),
-    marginHorizontal: wp(10),
+    marginHorizontal: wp(6),
   },
+
   title: {
-    fontFamily: 'Montserrat-Bold',
+    fontFamily: 'Montserrat-BoldItalic',
     fontSize: wp(4),
-    color: COLORS.DARK_BLUE,
+    color: COLORS.SHARK,
   },
   infoInput: {
     borderWidth: hp(0.1),
-    borderColor: COLORS.LIGHT_BLUE,
+    borderColor: COLORS.BLUE_VIOLET,
     width: wp(75),
     fontSize: hp(2),
-    marginTop: hp(4),
+    marginTop: hp(6),
     borderRadius: wp(3),
     paddingHorizontal: wp(4),
     fontFamily: 'Montserrat-Light',
@@ -46,14 +75,30 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   datePicker: {
-    marginTop: wp(8),
-    borderColor: COLORS.LIGHT_BLUE,
+    marginTop: wp(11),
+    borderColor: COLORS.BLUE_VIOLET,
     borderWidth: hp(0.1),
-    height: wp(10),
-    width: wp(25),
+    height: wp(12),
+    width: wp(35),
     borderRadius: wp(3),
+    justifyContent: 'center',
+    paddingHorizontal: wp(4),
+  },
+  confirmCon: {
+    marginTop: wp(50),
     alignItems: 'center',
     justifyContent: 'center',
+    borderColor: COLORS.JAFFA,
+    borderWidth: hp(0.1),
+    height: wp(10),
+    width: wp(70),
+    backgroundColor: COLORS.JAFFA,
+    borderRadius: wp(3),
+    marginHorizontal: wp(15),
+  },
+  confirmText: {
+    color: COLORS.WHISPER,
+    fontFamily: 'Montserrat-Light',
   },
 });
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, TouchableOpacity, TextInput, StatusBar} from 'react-native';
 
 //Style
 import styles from './style';
@@ -8,20 +8,41 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 //Component
 import TimePicker from '../../../pages/TimePicker/TimePicker';
-import BackIcon from '../../../../assets/icons/back';
+import BackIcon from '@assets/icons/back';
 import COLORS from '../../../utils/colorUtils';
 
 const UpdateBooking = props => {
   return (
     <View>
-      <View style={styles.headerContainer}>
-        <TouchableOpacity style={styles.back} onPress={props.goBack}>
-          <BackIcon width={hp(3)} height={hp(3)} color={COLORS.BLACK} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Update Data</Text>
-      </View>
+      <LinearGradient
+        colors={[COLORS.BLUE_VIOLET, COLORS.BLUE_VIOLET, COLORS.WHISPER]}
+        style={styles.container}>
+        <StatusBar backgroundColor={COLORS.BLUE_VIOLET} />
+
+        <View
+          style={{
+            flexDirection: 'row',
+          }}>
+          <TouchableOpacity onPress={props.goBack}>
+            <View style={styles.backCon}>
+              <BackIcon
+                width={hp(2)}
+                height={hp(2)}
+                color={COLORS.WHITE}
+                colors={COLORS.WHITE}
+              />
+            </View>
+          </TouchableOpacity>
+          <View style={styles.nameInfo}>
+            <Text style={styles.name}>Update Data</Text>
+          </View>
+        </View>
+      </LinearGradient>
+
       <View style={styles.inputContainer}>
         <Text style={styles.title}>Please fill information</Text>
         <TextInput
@@ -50,9 +71,9 @@ const UpdateBooking = props => {
           />
         </View>
       </View>
-      <View style={{marginTop: wp(30), alignItems: 'center'}}>
+      <View style={styles.confirmCon}>
         <TouchableOpacity onPress={props.update}>
-          <Text style={{color: COLORS.BLACK}}>UPDATE</Text>
+          <Text style={styles.confirmText}>UPDATE</Text>
         </TouchableOpacity>
       </View>
     </View>

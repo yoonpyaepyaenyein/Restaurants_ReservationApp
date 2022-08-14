@@ -17,8 +17,8 @@ const Map = ({navigation}) => {
   const yangonRegion = {
     latitude: 16.871311,
     longitude: 96.199379,
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421,
+    latitudeDelta: 0.1345,
+    longitudeDelta: 0.1367,
   };
 
   useEffect(() => {
@@ -29,12 +29,11 @@ const Map = ({navigation}) => {
     <View style={Styles.container}>
       <MapView style={Styles.map} initialRegion={yangonRegion}>
         {restaurants.map(restaurant => {
-          // console.log('rest::::', restaurant);
           return (
             <Marker
               key={restaurant.name}
               title={restaurant.name}
-              pinColor={COLORS.DARK_BLUE}
+              pinColor="#E98B43"
               coordinate={{
                 latitude: restaurant.geometry.location.lat,
                 longitude: restaurant.geometry.location.lng,

@@ -18,8 +18,12 @@ const TimePicker = props => {
     <View>
       <TouchableOpacity onPress={props.showDatePicker}>
         <View style={Styles.datePicker}>
-          <Text style={{color: COLORS.BLACK, fontFamily: 'Montserrat-Light'}}>
-            Pick Date
+          <Text
+            style={{
+              color: COLORS.GRAY,
+              fontFamily: 'Montserrat-Light',
+            }}>
+            Pick Date...
           </Text>
         </View>
       </TouchableOpacity>

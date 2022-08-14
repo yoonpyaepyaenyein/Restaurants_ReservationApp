@@ -1,11 +1,16 @@
 import React, {useLayoutEffect} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 //Component
 import RestaurantInfoScreen from '@pages/Restaurants/RestaurantInfo/RestaurantInfo';
 import RestaurantDetailsScreen from '@pages/Restaurants/RestaurantDetails/RestaurantDetails';
 import BookingDetailScreen from '../../pages/Booking/BookingDetail/BookingDetail';
+import COLORS from '../../utils/colorUtils';
 
 const Stack = createNativeStackNavigator();
 
@@ -13,10 +18,11 @@ const DashboardStack = ({navigation, route}) => {
   useLayoutEffect(() => {
     let showRouteName = [
       'DashboardStack',
-      'RestaurantInfo',
       'BookingStack',
-      'BookingDetail',
+      'SettingStack',
       'Map',
+      'RestaurantInfo',
+      'BookingDetail',
     ];
     let routeName = getFocusedRouteNameFromRoute(route);
 
@@ -25,7 +31,18 @@ const DashboardStack = ({navigation, route}) => {
         routeName == undefined ? 'RestaurantInfo' : routeName,
       )
     ) {
-      navigation.setOptions({tabBarStyle: {display: 'flex'}});
+      navigation.setOptions({
+        tabBarStyle: {
+          display: 'flex',
+          // height: 60,
+          // position: 'absolute',
+          // borderRadius: 10,
+          // bottom: 6,
+          // right: 10,
+          // left: 10,
+          // backgroundColor: COLORS.KIMBERLY,
+        },
+      });
     } else {
       navigation.setOptions({tabBarStyle: {display: 'none'}});
     }

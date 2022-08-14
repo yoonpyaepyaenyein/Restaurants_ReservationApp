@@ -15,10 +15,6 @@ import Open from '@assets/icons/open';
 import Favourite from '@pages/Favourites/FavouriteToggle/Favourite';
 
 const RestaurantInfoCard = props => {
-  useEffect(() => {
-    // console.log('PROPS>>>', props.restaurant.rating);
-  }, []);
-
   const ratingArray = Array.from(new Array(props.restaurant.rating));
 
   return (
@@ -42,7 +38,6 @@ const RestaurantInfoCard = props => {
             <View style={styles.rating}>
               {ratingArray.map(() => (
                 <Star
-                  // key={`star-${placeI}-{i}`}
                   key={Math.random()}
                   width={hp(2.6)}
                   height={hp(3)}

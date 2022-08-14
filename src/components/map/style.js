@@ -5,16 +5,28 @@ import {
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 
+import COLORS from '../../utils/colorUtils';
+
 const styles = StyleSheet.create({
-  imageContainer: {
+  text: {
+    color: COLORS.WHITE,
+    fontFamily: 'Montserrat-Regular',
+    fontSize: wp(3),
+  },
+  textContainer: {
+    borderRadius: wp(1),
+    // backgroundColor: COLORS.BLUE_VIOLET,
+    borderColor: COLORS.WHISPER,
+    borderWidth: wp(0.1),
     alignItems: 'center',
+    justifyContent: 'center',
+    width: wp(30),
+    height: wp(10),
   },
-  image: {
-    width: 100,
-    height: 100,
-    borderRadius: wp(5),
-    resizeMode: 'cover',
-  },
+  // container: {
+  //   width: wp(30),
+  //   height: wp(10),
+  // },
 });
 
 export default styles;

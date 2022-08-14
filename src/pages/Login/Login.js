@@ -1,16 +1,25 @@
 import React, {useState, useContext} from 'react';
-import {ToastAndroid} from 'react-native';
+import {ToastAndroid, View, TouchableOpacity, Text} from 'react-native';
+
+//Style
+import Styles from './Style';
 
 //Components
 import LoginHeader from '@components/login/loginHeader';
 import {appStorage} from '../../utils/appStorage';
 import {AuthContext} from '../../context/context';
+import AlertModal from '../../components/alert/alertModal';
+import {useLocal} from '../../hook/useLocal';
 
 const Login = ({navigation}) => {
+  const local = useLocal();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
-  const {auth, getAuth, getUserInfo} = useContext(AuthContext);
+  const {auth, getAuth, getUserInfo, changeLanguage, lang} =
+    useContext(AuthContext);
 
   const loginHandler = () => {
     let token = '1234567890';
@@ -35,15 +44,47 @@ const Login = ({navigation}) => {
     }
   };
 
+  const changeLanguageHandler = value => {
+    appStorage.setItem('@language', value);
+    changeLanguage(value);
+    setShowModal(false);
+  };
+
+  const languageHandler = () => {
+    setShowModal(true);
+  };
+
   return (
-    <LoginHeader
-      emailValue={email}
-      onChangeEmail={value => setEmail(value)}
-      passValue={password}
-      onChangePass={value => setPassword(value)}
-      goLogin={loginHandler}
-      goRegister={() => navigation.navigate('Register')}
-    />
+    <View style={Styles.container}>
+      <View style={Styles.headerStyle}>
+        <TouchableOpacity style={{padding: 5}} onPress={languageHandler}>
+          {lang === 'en' ? (
+            <Text style={{color: '#7357B8', fontFamily: 'Montserrat-Regular'}}>
+              English
+            </Text>
+          ) : (
+            <Text style={{color: '#7357B8', fontFamily: 'Montserrat-Regular'}}>
+              Myanmar
+            </Text>
+          )}
+        </TouchableOpacity>
+      </View>
+      <LoginHeader
+        emailValue={email}
+        onChangeEmail={value => setEmail(value)}
+        passValue={password}
+        onChangePass={value => setPassword(value)}
+        goLogin={loginHandler}
+        goRegister={() => navigation.navigate('Register')}
+      />
+
+      {showModal && (
+        <AlertModal
+          languageAction={value => changeLanguageHandler(value)}
+          selectedLang={lang}
+        />
+      )}
+    </View>
   );
 };
 

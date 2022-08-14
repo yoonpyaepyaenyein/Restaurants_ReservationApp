@@ -15,6 +15,8 @@ import {
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 //Component
 import COLORS from '../../../utils/colorUtils';
 import Star from '@assets/icons/star';
@@ -25,59 +27,64 @@ const RestaurantDetailMenu = props => {
   const ratingArray = Array.from(new Array(props.restaurant.rating));
 
   return (
-    <SafeAreaView>
-      <View>
-        <ImageBackground
-          source={{uri: props.restaurant.photos}}
-          resizeMode="cover"
-          style={styles.imageBackground}>
-          <View
-            style={{
-              position: 'absolute',
-              top: 20,
-              left: 10,
-              borderRadius: 50,
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}>
-            <View>
-              <TouchableOpacity onPress={props.goBack}>
-                <Back width={hp(3)} height={hp(3)} color={COLORS.WHITE} />
-              </TouchableOpacity>
+    <View>
+      <LinearGradient
+        colors={[COLORS.BLUE_VIOLET, COLORS.WHITE, COLORS.WHISPER]}>
+        <View>
+          <ImageBackground
+            source={{uri: props.restaurant.photos}}
+            resizeMode="cover"
+            style={styles.imageBackground}>
+            <View
+              style={{
+                position: 'absolute',
+                top: wp(5),
+                left: wp(5),
+              }}>
+              <View style={styles.goBackIcon}>
+                <TouchableOpacity onPress={props.goBack}>
+                  <Back width={hp(2.3)} height={hp(3)} color={COLORS.WHITE} />
+                </TouchableOpacity>
+              </View>
             </View>
-          </View>
-          <View style={styles.detailContainer}>
-            <View style={styles.detail}>
-              <Text style={styles.title}>{props.restaurant.name}</Text>
-              <Text style={styles.rating}>Rating</Text>
-            </View>
-            <View style={styles.ratingIcon}>
-              {ratingArray.map(() => (
-                <Star
-                  key={Math.random()}
-                  width={hp(2.6)}
+            <View style={styles.detailContainer}>
+              <View style={styles.detail}>
+                <Text style={styles.title}>{props.restaurant.name}</Text>
+                <Text style={styles.rating}>Rating</Text>
+              </View>
+              <View style={styles.ratingIcon}>
+                {ratingArray.map(() => (
+                  <Star
+                    key={Math.random()}
+                    width={hp(2.6)}
+                    height={hp(3)}
+                    style={styles.star}
+                  />
+                ))}
+              </View>
+              <View style={styles.location}>
+                <Location
+                  width={hp(3)}
                   height={hp(3)}
-                  style={styles.star}
+                  color={COLORS.BLUE_VIOLET}
                 />
-              ))}
+                <Text style={styles.address}>{props.restaurant.address}</Text>
+              </View>
             </View>
-            <View style={styles.location}>
-              <Location width={hp(3)} height={hp(3)} color={COLORS.DARK_BLUE} />
-              <Text style={styles.address}>{props.restaurant.address}</Text>
-            </View>
-          </View>
-        </ImageBackground>
-      </View>
-      <View style={styles.desContainer}>
-        <Text style={styles.description}>{props.restaurant.description}</Text>
-      </View>
+          </ImageBackground>
+        </View>
+        <View style={styles.desContainer}>
+          <Text style={styles.desText}>Description</Text>
+          <Text style={styles.description}>{props.restaurant.description}</Text>
+        </View>
 
-      <View style={styles.footer}>
-        <TouchableOpacity onPress={props.booking} style={styles.btn}>
-          <Text style={styles.btnText}>book a table</Text>
+        <TouchableOpacity onPress={props.booking}>
+          <View style={styles.bookingContainer}>
+            <Text style={styles.booking}>BOOKING</Text>
+          </View>
         </TouchableOpacity>
-      </View>
-    </SafeAreaView>
+      </LinearGradient>
+    </View>
   );
 };
 

@@ -4,7 +4,7 @@ import Svg, {SvgProps, Path, G} from 'react-native-svg';
 const Star = props => (
   <Svg viewBox="0 0 48 48" width={props.width} height={props.height}>
     <Path
-      fill="#FFCA28"
+      fill="#E98B43"
       d="m24 4 7 13 14 2-10 10 2 15-13-7-13 7 2-15L3 19l14-2z"
     />
     <G fill="#F9A825">

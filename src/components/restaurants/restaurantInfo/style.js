@@ -8,18 +8,18 @@ import COLORS from '../../../utils/colorUtils';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F2F9FC',
+    backgroundColor: COLORS.WHISPER,
   },
   cardContainer: {
     marginHorizontal: wp(4),
-    backgroundColor: COLORS.WHITE,
+    backgroundColor: COLORS.WHISPER,
   },
   card: {
     backgroundColor: COLORS.WHITE,
     height: hp(37),
     width: wp(92),
     shadowOffset: {width: 0, height: 5},
-    shadowColor: COLORS.DARK_BLUE,
+    shadowColor: COLORS.BLUE_VIOLET,
     shadowOpacity: hp(0.5),
     elevation: 5,
   },
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     paddingVertical: wp(-5),
   },
   title: {
-    color: COLORS.DARK_BLUE,
+    color: COLORS.SHARK,
     fontFamily: 'Montserrat-BoldItalic',
     fontSize: wp(4),
   },
@@ -51,8 +51,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
   },
   address: {
-    color: COLORS.LIGHT_BLUE,
-    fontFamily: 'Montserrat-Bold',
+    color: COLORS.SHARK,
+    fontFamily: 'Montserrat-Regular',
     fontSize: wp(3),
   },
 });

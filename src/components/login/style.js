@@ -8,18 +8,25 @@ import COLORS from '../../utils/colorUtils';
 
 const Styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#F2F9FC',
+    marginLeft: wp(-5),
+    // flex: 1,
+    // backgroundColor: '#F2F9FC',
   },
   title: {
-    color: COLORS.DARK_BLUE,
-    fontWeight: 'bold',
-    marginTop: wp(24),
-    paddingLeft: wp(7),
+    color: COLORS.BLUE_VIOLET,
+    marginTop: wp(14),
     fontSize: wp(7),
-    fontFamily: 'Montserrat-BoldItalic',
-    // alignContent: 'center',
-    // marginTop: wp(25),
+    fontFamily: 'Montserrat-Bold',
+  },
+  welcome: {
+    fontFamily: 'Montserrat-Bold',
+    color: COLORS.BLUE_VIOLET,
+    fontSize: wp(7),
+  },
+  back: {
+    fontFamily: 'Montserrat-Bold',
+    color: COLORS.BLUE_VIOLET,
+    fontSize: wp(7),
   },
   subTitle: {
     fontSize: wp(4),
@@ -30,34 +37,44 @@ const Styles = StyleSheet.create({
   },
   inputContainer: {
     marginVertical: hp(3),
-    paddingLeft: wp(7),
   },
   emailInput: {
-    borderWidth: hp(0.1),
-    borderColor: COLORS.BLACK,
+    // borderWidth: hp(0.1),
+    borderColor: COLORS.WHITE,
     width: wp(75),
     fontSize: hp(2),
-    marginTop: hp(5),
+    marginTop: hp(3),
     borderRadius: wp(2),
     paddingStart: wp(6),
     fontFamily: 'Montserrat-Light',
     color: COLORS.BLACK,
+    backgroundColor: COLORS.WHISPER,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: hp(0.5)},
+    shadowOpacity: 0.2,
+    shadowRadius: hp(1),
+    elevation: 3,
   },
 
   btnContainer: {
-    marginVertical: hp(4),
-    paddingLeft: wp(7),
+    marginVertical: hp(1),
+    // paddingLeft: wp(5),
   },
 
   btnContent: {
     backgroundColor: COLORS.DARK_BLUE,
-    width: wp(35),
+    width: wp(75),
     paddingVertical: hp(1.5),
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: wp(2),
     marginTop: wp(2),
     height: wp(13),
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: hp(0.5)},
+    shadowOpacity: 0.2,
+    shadowRadius: hp(1),
+    elevation: 3,
   },
 
   loginText: {
@@ -67,20 +84,17 @@ const Styles = StyleSheet.create({
   },
 
   qContainer: {
-    paddingLeft: wp(7),
-    marginTop: wp(7),
+    marginTop: wp(13),
     flexDirection: 'row',
     alignItems: 'center',
   },
   qText: {
-    color: COLORS.BLACK,
-    // fontSize: hp(2),
+    color: COLORS.KIMBERLY,
     fontFamily: 'Montserrat-Bold',
   },
   regTextContainer: {},
   regText: {
-    color: COLORS.DARK_BLUE,
-    // fontSize: hp(2.2),
+    color: COLORS.BLUE_VIOLET,
     fontFamily: 'Montserrat-Medium',
   },
 });

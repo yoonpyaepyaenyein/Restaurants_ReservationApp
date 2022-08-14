@@ -20,9 +20,11 @@ import {
 } from '../../../utils/restaurantService';
 import {FavouriteContext} from '../../../context/context';
 import FavouriteBar from '../../Favourites/FavouriteBar/FavouriteBar';
+import {AuthContext} from '../../../context/context';
 
 const RestaurantInfo = ({navigation}) => {
   const [toggle, setIsToggle] = useState(false);
+  const {userInfo} = useContext(AuthContext);
 
   const {
     restaurants,
@@ -51,7 +53,7 @@ const RestaurantInfo = ({navigation}) => {
         .catch(err => {
           getError(err);
         });
-    }, 2000);
+    }, 1000);
   };
 
   const restaurantDetailHandler = value => {
@@ -77,6 +79,7 @@ const RestaurantInfo = ({navigation}) => {
         <SearchBar
           isFavouriteToggle={toggle}
           onFavouritesToggle={() => setIsToggle(!toggle)}
+          data={userInfo}
         />
       </View>
       {toggle && (

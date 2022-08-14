@@ -28,15 +28,7 @@
       "photos": "https://www.nycgo.com/images/venues/4088/the_ritz-carlton_new_york,_central_park_auden_bistro_the_ritz-carlton_new_york,_central_park__medium.jpg",
       "id": 1,
       "place_id": "some place id 1",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
       "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 2329,
       "vicinity": "61 University Avenue Road, Yangon,"
     },
@@ -66,15 +58,7 @@
       "photos": "https://media-cdn.tripadvisor.com/media/photo-s/14/ef/f2/3a/welcome-to-fratello.jpg",
       "id": 2,
       "place_id": "some place id 2",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
       "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
       "user_ratings_total": 2329,
       "vicinity": "Penthouse Floor, The Regency Office"
     },
@@ -102,14 +86,7 @@
       "photos": "https://media-cdn.tripadvisor.com/media/photo-s/14/c2/b9/cb/private-dining-area.jpg",
       "id": 3,
       "place_id": "some place id 3",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
       "rating": 4,
-      "reference": "",
-      "scope": "",
       "types": [
         "bar",
         "restaurant",
@@ -146,15 +123,9 @@
       "photos": "https://dev.myanmarvoyages.com/wp-content/uploads/2020/08/Taing-Yin-Thar-Restaurant-Gallery-2.jpg",
       "id": 4,
       "place_id": "some place id 4",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
+
       "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+
       "user_ratings_total": 2329,
       "vicinity": "No.(2/A),Kanbae Road,(6)Quarte"
     },
@@ -162,34 +133,33 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 16.846332,
-          "lng": 96.136606
+          "lat": 16.8384,
+          "lng": 96.1311
         },
-
         "viewport": {
           "northeast": {
-            "lat": 16.84633294302915,
-            "lng": 96.1366064130291502
+            "lat": 16.8384143802915,
+            "lng": 96.1311205197085
           },
           "southwest": {
-            "lat": 5.9619014697085,
-            "lng": 96.136606169708497
+            "lat": 16.8384164197085,
+            "lng": 96.1311184802915
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
-      "name": "Pizza hut",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "name": "Together BBQ Restaurant",
       "opening_hours": {
         "open_now": true
       },
-      "photos": "https://gray-wvir-prod.cdn.arcpublishing.com/resizer/l_ZlW86PPJ0CTOQ6SDMPW4Si8KU=/1200x675/smart/filters:quality(85)/cloudfront-us-east-1.images.arcpublishing.com/gray/YMFAE4MTJZD5RIN2ZAZII2RRII.jpg",
+      "photos": "https://media-cdn.tripadvisor.com/media/photo-s/18/53/52/93/inside-of-together-food.jpg",
       "id": 5,
       "place_id": "some place id 5",
-      "rating": 4,
-      "reference": "",
-      "user_ratings_total": 832,
-      "vicinity": "First Floor,marketplace 6.5 miles, Pyay Road",
-      "description": "Pizza Hut is an American multinational restaurant chain and international franchise founded in 1958 in Wichita, Kansas by Dan and Frank Carney. They serve their signature pan pizza and other dishes including pasta, breadsticks and desserts."
+
+      "rating": 5,
+
+      "user_ratings_total": 2329,
+      "vicinity": "Sin Phyu Taw Hotel, Yangon"
     },
     {
       "business_status": "OPERATIONAL",
@@ -218,12 +188,7 @@
       "id": 6,
       "place_id": "some place id 6",
       "rating": 4,
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "reference": "",
-      "scope": "",
+
       "types": [
         "spa",
         "lodging",
@@ -241,33 +206,40 @@
       "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 16.9027,
-          "lng": 96.1356
+          "lat": 16.8042,
+          "lng": 96.2117
         },
         "viewport": {
           "northeast": {
-            "lat": 16.90274323029149,
-            "lng": 96.135661330291503
+            "lat": 16.8042644302915,
+            "lng": 96.21175841970849
           },
           "southwest": {
-            "lat": 16.902752697085,
-            "lng": 96.135663369708498
+            "lat": 16.8042664697085,
+            "lng": 96.2117563802915
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "KFC",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+      "name": "Oriental House Thakayta ",
       "opening_hours": {
         "open_now": true
       },
-      "photos": "https://developinglafayette.com/wp-content/uploads/2018/06/img_0087-2.jpg",
+      "photos": "https://www.designinmyanmar.com/wp-content/uploads/2020/03/19-3.jpg",
       "id": 7,
       "place_id": "some place id 7",
+
       "rating": 5,
-      "reference": "",
-      "user_ratings_total": 122,
-      "vicinity": " YANGON Air port",
-      "description": "fufu, also spelled foofoo, a popular dish in western and central African countries and, due to African migration, in the Caribbean as well."
+
+      "types": [
+        "cafe",
+        "restaurant",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "user_ratings_total": 5639,
+      "vicinity": " 1 Ayer Wun St, Yangon, Myanmar "
     },
     {
       "business_status": "CLOSED_TEMPORARILY",
@@ -293,14 +265,10 @@
       "photos": "https://media-cdn.tripadvisor.com/media/photo-s/11/9d/d8/93/snack-shop.jpg",
       "id": 8,
       "place_id": "some place id 8",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
+
       "price_level": 3,
       "rating": 4,
-      "reference": "",
-      "scope": "",
+
       "types": [
         "bar",
         "restaurant",
@@ -338,14 +306,9 @@
       "photos": "https://theworldlovesmelbourne.com/images/Restaurants34/Musou/musouweb-29.jpg",
       "id": 9,
       "place_id": "some place id 9",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
+
       "rating": 4,
-      "reference": "",
-      "scope": "",
+
       "types": [
         "hair_care",
         "restaurant",
@@ -355,51 +318,40 @@
         "establishment"
       ],
       "user_ratings_total": 1644,
-      "vicinity": "Lan Thit Road, Nant Thar Gone Quarter, Yangon",
+      "vicinity": "Lan Thit Road,Nant Thar Gone Quarter",
       "description": "fufu, also spelled foofoo, a popular dish in western and central African countries and, due to African migration, in the Caribbean as well."
     },
     {
-      "business_status": "CLOSED_TEMPORARILY",
+      "business_status": "OPERATIONAL",
       "geometry": {
         "location": {
-          "lat": 16.7791,
-          "lng": 96.1543
+          "lat": 16.86526,
+          "lng": 96.1435
         },
         "viewport": {
           "northeast": {
-            "lat": 16.77917373029149,
-            "lng": 96.1543934197085
+            "lat": 16.8652143802915,
+            "lng": 96.1435205197085
           },
           "southwest": {
-            "lat": 16.77917576970849,
-            "lng": 96.1543913802915
+            "lat": 16.8652164197085,
+            "lng": 96.1435184802915
           }
         }
       },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
-      "name": "Cha Tra Mue",
-      "permanently_closed": true,
-      "photos": "https://res.klook.com/image/upload/activities/dgab9oasvjqrsrw35dbn.jpg",
+      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+      "name": "Fisherman's Wharf",
+      "opening_hours": {
+        "open_now": true
+      },
+      "photos": "https://www.comfortfurniture.com.sg/image/cache/catalog/Myanmar%20Portfolio/Food%20Beverage/Fisherman's%20Wharf%20yangon/Fisherman's%20Wharf%20@8mile,%20Yangon_03-zoom-1200x630.jpg",
       "id": 10,
       "place_id": "some place id 10",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 3,
-      "rating": 3,
-      "reference": "",
-      "scope": "",
-      "types": [
-        "bar",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 490,
-      "vicinity": "Junction City",
-      "description": "Cha Tra Mue, also spelled foofoo, a popular dish in western and central African countries and, due to African migration, in the Caribbean as well."
+
+      "rating": 5,
+
+      "user_ratings_total": 2329,
+      "vicinity": "No.2 Kyaung St, Yangon"
     },
     {
       "business_status": "OPERATIONAL",
@@ -489,15 +441,10 @@
       "photos": "https://media-cdn.tripadvisor.com/media/photo-s/07/89/aa/08/golden-duck-restaurant.jpg",
       "id": 13,
       "place_id": "some place id 13",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
+
       "price_level": 4,
       "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+
       "user_ratings_total": 152,
       "vicinity": "No. 224,Strand Rd"
     },
@@ -527,14 +474,9 @@
       "photos": "https://www.tastewindowmagazine.com/wp-content/uploads/2015/12/Ykko_1.jpg",
       "id": 14,
       "place_id": "some place id 14",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
+
       "rating": 5,
-      "reference": "",
-      "scope": "",
+
       "types": [
         "restaurant",
         "cafe",
@@ -571,15 +513,10 @@
       "photos": "https://www.irrawaddy.com/wp-content/uploads/2018/09/6-2.jpg",
       "id": 15,
       "place_id": "some place id 15",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
+
       "price_level": 3,
       "rating": 4,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+
       "user_ratings_total": 1274,
       "vicinity": "First Floor, Corner of Merchant Road &,"
     },
@@ -609,13 +546,9 @@
       "photos": "https://media-cdn.tripadvisor.com/media/photo-s/1a/94/7b/f6/walls.jpg",
       "id": 16,
       "place_id": "some place id 16",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
+
       "rating": 4,
-      "reference": "",
-      "scope": "",
+
       "types": [
         "cafe",
         "lodging",
@@ -654,15 +587,10 @@
       "photos": "https://enjoyinmyanmar.com/wp-content/uploads/2019/09/20190921_134306-min-1024x485.jpg",
       "id": 17,
       "place_id": "some place id 17",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
+
       "price_level": 4,
       "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+
       "user_ratings_total": 362,
       "vicinity": "77B Shin Saw Pu"
     },
@@ -692,143 +620,12 @@
       "photos": "https://media-cdn.tripadvisor.com/media/photo-s/0f/c9/a9/01/entrance-of-bushido-at.jpg",
       "id": 18,
       "place_id": "some place id 18",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
+
       "price_level": 3,
       "rating": 4,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
+
       "user_ratings_total": 151,
       "vicinity": "No. 75/AB, Bo Yar Nyunt Rd"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": 16.881,
-          "lng": 96.1346
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.8810127302915,
-            "lng": 96.134668230291503
-          },
-          "southwest": {
-            "lat": 16.8810147697085,
-            "lng": 96.134670269708499
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "J’Donuts North Point",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": "https://image.shutterstock.com/image-photo/yangon-myanmar-02-january-2017-600w-1201681612.jpg",
-      "id": 19,
-      "place_id": "some place id 19",
-      "rating": 4,
-      "reference": "",
-      "user_ratings_total": 152,
-      "vicinity": "No.G-27 9Mile, Townships"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": 16.8048,
-          "lng": 96.1943
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.8048264802915,
-            "lng": 96.194363080291502
-          },
-          "southwest": {
-            "lat": 16.8048285197085,
-            "lng": 96.194365119708497
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Shwe Pu Zun Cafeteria",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": "https://zaypages.com/wp-content/uploads/2021/01/s2.jpg",
-      "id": 20,
-      "place_id": "some place id 20",
-      "price_level": 2,
-      "rating": 5,
-      "reference": "",
-      "user_ratings_total": 766,
-      "vicinity": "No.14/A Min Nandar Rd"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": 16.7764,
-          "lng": 96.1688
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.77644323029149,
-            "lng": 96.168861330291503
-          },
-          "southwest": {
-            "lat": 16.7764452697085,
-            "lng": 96.168863369708498
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Thai 47 ",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": "https://media-cdn.tripadvisor.com/media/photo-s/10/b5/1c/f4/elegant-decorations-with.jpg",
-      "id": 21,
-      "place_id": "some place id 21",
-      "rating": 4,
-      "reference": "",
-      "user_ratings_total": 122,
-      "vicinity": "No.153, Corner Of 47th Street"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": 16.7835,
-          "lng": 96.156
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.7835723802915,
-            "lng": 96.15606180291502
-          },
-          "southwest": {
-            "lat": 16.7835744197085,
-            "lng": 96.15608219708497
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Chilli Pot",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": "https://www.restaurantguide.com.mm/assets/images/listing/photo/L00285717/4.jpg",
-      "id": 22,
-      "place_id": "some place id 22",
-      "price_level": 2,
-      "rating": 3,
-      "reference": "",
-      "user_ratings_total": 441,
-      "vicinity": "No. 23 Nawaday St, Yangon"
     },
     {
       "business_status": "OPERATIONAL",
@@ -854,16 +651,11 @@
         "open_now": true
       },
       "photos": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/e1/98/bf/v-hangout-up-stair.jpg",
-      "id": 23,
-      "place_id": "some place id 23",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
+      "id": 19,
+      "place_id": "some place id 19",
+
       "rating": 5,
-      "reference": "",
-      "scope": "",
+
       "types": [
         "cafe",
         "restaurant",
@@ -873,242 +665,6 @@
       ],
       "user_ratings_total": 5639,
       "vicinity": "Q58G+M82, Yangon, Myanmar"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": 16.8042,
-          "lng": 96.2117
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.8042644302915,
-            "lng": 96.21175841970849
-          },
-          "southwest": {
-            "lat": 16.8042664697085,
-            "lng": 96.2117563802915
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
-      "name": "Oriental House Thakayta ",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": "https://www.designinmyanmar.com/wp-content/uploads/2020/03/19-3.jpg",
-      "id": 24,
-      "place_id": "some place id 24",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
-      "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": [
-        "cafe",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 5639,
-      "vicinity": " 1 Ayer Wun St, Yangon, Myanmar "
-    },
-    {
-      "business_status": "CLOSED_TEMPORARILY",
-      "geometry": {
-        "location": {
-          "lat": 16.7935,
-          "lng": 96.1643
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.7935998302915,
-            "lng": 96.16436636970849
-          },
-          "southwest": {
-            "lat": 16.7935186970851,
-            "lng": 96.1643643302915
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Shwe Karaweik",
-      "permanently_closed": true,
-      "photos": "https://media-cdn.tripadvisor.com/media/photo-s/14/c2/b9/cb/private-dining-area.jpg",
-      "id": 25,
-      "place_id": "some place id 25",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
-      "rating": 4,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      "user_ratings_total": 3042,
-      "vicinity": "No.23 Kan Yeik Tha Rd"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": 16.8207,
-          "lng": 96.1558
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.8207143802915,
-            "lng": 96.1558205197085
-          },
-          "southwest": {
-            "lat": 16.8207164197085,
-            "lng": 96.1558184802915
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Real Pork ",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": "https://www.gayot.com/images/reviews/brother-jimmys-murray-hill.jpg",
-      "id": 26,
-      "place_id": "some place id 26",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
-      "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      "user_ratings_total": 2329,
-      "vicinity": "Nat Mauk Yeik Thar Lane Rd"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": 16.8384,
-          "lng": 96.1311
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.8384143802915,
-            "lng": 96.1311205197085
-          },
-          "southwest": {
-            "lat": 16.8384164197085,
-            "lng": 96.1311184802915
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Together Food & BBQ Restaurant",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": "https://media-cdn.tripadvisor.com/media/photo-s/18/53/52/93/inside-of-together-food.jpg",
-      "id": 27,
-      "place_id": "some place id 27",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
-      "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      "user_ratings_total": 2329,
-      "vicinity": "Sin Phyu Taw Hotel, Yangon"
-    },
-    {
-      "business_status": "OPERATIONAL",
-      "geometry": {
-        "location": {
-          "lat": 16.86526,
-          "lng": 96.1435
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.8652143802915,
-            "lng": 96.1435205197085
-          },
-          "southwest": {
-            "lat": 16.8652164197085,
-            "lng": 96.1435184802915
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "Fisherman's Wharf",
-      "opening_hours": {
-        "open_now": true
-      },
-      "photos": "https://www.comfortfurniture.com.sg/image/cache/catalog/Myanmar%20Portfolio/Food%20Beverage/Fisherman's%20Wharf%20yangon/Fisherman's%20Wharf%20@8mile,%20Yangon_03-zoom-1200x630.jpg",
-      "id": 28,
-      "place_id": "some place id 28",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
-      "rating": 5,
-      "reference": "",
-      "scope": "",
-      "types": ["restaurant", "food", "point_of_interest", "establishment"],
-      "user_ratings_total": 2329,
-      "vicinity": "No.2 Kyaung St, Yangon"
-    },
-    {
-      "business_status": "CLOSED_TEMPORARILY",
-      "geometry": {
-        "location": {
-          "lat": 16.8063,
-          "lng": 96.1729
-        },
-        "viewport": {
-          "northeast": {
-            "lat": 16.8063916302915,
-            "lng": 96.1729167697085
-          },
-          "southwest": {
-            "lat": 16.8063936697085,
-            "lng": 96.17291473029151
-          }
-        }
-      },
-      "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-      "name": "YUMMY SPICY THAI FOOD",
-      "permanently_closed": true,
-      "photos": "https://media-cdn.tripadvisor.com/media/photo-s/10/b5/1c/f4/elegant-decorations-with.jpg",
-      "id": 29,
-      "place_id": "some place id 29",
-      "plus_code": {
-        "compound_code": "",
-        "global_code": ""
-      },
-      "price_level": 2,
-      "rating": 4,
-      "reference": "",
-      "scope": "",
-      "types": [
-        "bar",
-        "restaurant",
-        "food",
-        "point_of_interest",
-        "establishment"
-      ],
-      "user_ratings_total": 1078,
-      "vicinity": "Aung Tayza St, Yangon"
     }
   ],
 

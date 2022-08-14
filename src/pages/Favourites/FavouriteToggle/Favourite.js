@@ -39,9 +39,9 @@ const Favourite = ({restaurant}) => {
             : removeFromFavourite(restaurant)
         }>
         {isFavourite ? (
-          <Heart width={hp(5)} height={hp(5)} colors="red" />
+          <Heart width={hp(5)} height={hp(5)} colors="#E98B43" />
         ) : (
-          <Heart width={hp(5)} height={hp(5)} color="red" />
+          <Heart width={hp(5)} height={hp(5)} color="#E98B43" />
         )}
       </TouchableOpacity>
     </View>

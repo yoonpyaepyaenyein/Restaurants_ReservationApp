@@ -9,6 +9,7 @@ import COLORS from '../../utils/colorUtils';
 
 const styles = StyleSheet.create({
   container: {
+    // flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'rgba(127,127, 127, 0.6)',
@@ -17,66 +18,33 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   modalContainer: {
-    width: wp(80),
-    height: hp(35),
+    width: wp(70),
+    height: hp(18),
     backgroundColor: '#fff',
-    borderRadius: hp(0.3),
-    borderRadius: wp(5),
-    // justifyContent: 'space-evenly',
-  },
-  headerTitle: {
-    // alignSelf: 'center',
-    fontSize: hp(2),
-    color: COLORS.DARK_BLUE,
-    marginHorizontal: wp(3),
-    marginVertical: wp(3),
-    fontFamily: 'Montserrat-BoldItalic',
-  },
-  inputContainer: {
-    // marginVertical: hp(2),
-    marginHorizontal: wp(7),
-  },
-  input: {
-    borderWidth: hp(0.2),
-    borderColor: '#ddd',
-    width: wp(65),
-    height: wp(10),
-    fontSize: hp(2),
-    borderRadius: wp(2),
-    marginTop: wp(3),
-    paddingHorizontal: wp(3),
-    color: COLORS.BLACK,
-    fontFamily: 'Montserrat-Regular',
-  },
-  datePicker: {
-    marginTop: wp(3),
-    borderColor: '#ddd',
-    borderWidth: hp(0.2),
-    height: wp(10),
-    width: wp(25),
-    borderRadius: wp(2),
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: COLORS.BLACK,
-  },
-  btnContainer: {
-    marginTop: wp(5),
-    marginHorizontal: wp(5),
-    flexDirection: 'row',
+    borderRadius: hp(2),
     justifyContent: 'space-evenly',
   },
-  btnContent: {
-    borderColor: COLORS.LIGHT_BLUE,
-    borderWidth: wp(0.2),
-    borderRadius: wp(2),
-    width: wp(18),
-    height: wp(8),
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: COLORS.LIGHT_BLUE,
+  item: {
+    // backgroundColor: '#ddd',
+    paddingHorizontal: hp(3),
+    paddingVertical: hp(3),
+    fontFamily: 'Montserrat-Light',
   },
-  btnText: {
-    color: COLORS.WHITE,
+  headerTitle: {
+    alignSelf: 'center',
+    fontSize: hp(2),
+    color: COLORS.SHARK,
+    fontFamily: 'Montserrat-Light',
+  },
+  title: {
+    color: 'blue',
+    fontFamily: 'Montserrat-Light',
+  },
+  line: {
+    width: '90%',
+    height: hp(0.1),
+    backgroundColor: COLORS.KIMBERLY,
+    alignSelf: 'center',
   },
 });
 

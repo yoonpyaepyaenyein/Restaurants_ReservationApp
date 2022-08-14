@@ -27,7 +27,20 @@ const TabNavigator = () => {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarStyle: {
+            // height: 60,
+            // position: 'absolute',
+            // borderRadius: 10,
+            // bottom: 6,
+            // right: 10,
+            // left: 10,
+            // backgroundColor: COLORS.KIMBERLY,
+            // borderTopLeftRadius: 5,
+            // borderTopRightRadius: 5,
+          },
+        }}>
         <Tab.Screen
           name="DashboardStack"
           component={DashboardStack}
@@ -36,7 +49,7 @@ const TabNavigator = () => {
             title: 'Dashboard',
             tabBarIcon: ({focused, color, size}) => (
               <RestaurantIcon
-                colors={focused ? COLORS.DARK_BLUE : '#000000'}
+                colors={focused ? COLORS.JAFFA : COLORS.SHARK}
                 width={hp(3)}
                 height={hp(3)}
               />
@@ -45,8 +58,8 @@ const TabNavigator = () => {
               fontSize: hp(1.6),
               paddingBottom: hp(0.5),
             },
-            tabBarActiveTintColor: COLORS.DARK_BLUE,
-            tabBarInactiveTintColor: COLORS.BLACK,
+            tabBarActiveTintColor: COLORS.JAFFA,
+            tabBarInactiveTintColor: COLORS.SHARK,
           }}
         />
         <Tab.Screen
@@ -57,7 +70,7 @@ const TabNavigator = () => {
             title: 'Map',
             tabBarIcon: ({focused, color, size}) => (
               <MapIcon
-                colors={focused ? COLORS.DARK_BLUE : COLORS.BLACK}
+                colors={focused ? COLORS.JAFFA : COLORS.SHARK}
                 width={hp(3)}
                 height={hp(3)}
               />
@@ -66,8 +79,8 @@ const TabNavigator = () => {
               fontSize: hp(1.6),
               paddingBottom: hp(0.5),
             },
-            tabBarActiveTintColor: COLORS.DARK_BLUE,
-            tabBarInactiveTintColor: COLORS.BLACK,
+            tabBarActiveTintColor: COLORS.JAFFA,
+            tabBarInactiveTintColor: COLORS.SHARK,
           }}
         />
 
@@ -79,7 +92,7 @@ const TabNavigator = () => {
             title: 'Booking',
             tabBarIcon: ({focused, color, size}) => (
               <CartIcon
-                colors={focused ? COLORS.DARK_BLUE : '#000000'}
+                colors={focused ? COLORS.JAFFA : COLORS.SHARK}
                 width={hp(3)}
                 height={hp(3)}
               />
@@ -88,8 +101,8 @@ const TabNavigator = () => {
               fontSize: hp(1.6),
               paddingBottom: hp(0.5),
             },
-            tabBarActiveTintColor: COLORS.DARK_BLUE,
-            tabBarInactiveTintColor: COLORS.BLACK,
+            tabBarActiveTintColor: COLORS.JAFFA,
+            tabBarInactiveTintColor: COLORS.SHARK,
           }}
         />
         <Tab.Screen
@@ -100,7 +113,7 @@ const TabNavigator = () => {
             title: 'Setting',
             tabBarIcon: ({focused, color, size}) => (
               <SettingIcon
-                colors={focused ? COLORS.DARK_BLUE : COLORS.BLACK}
+                colors={focused ? COLORS.JAFFA : COLORS.SHARK}
                 width={hp(3)}
                 height={hp(3)}
               />
@@ -109,8 +122,8 @@ const TabNavigator = () => {
               fontSize: hp(1.6),
               paddingBottom: hp(0.5),
             },
-            tabBarActiveTintColor: COLORS.DARK_BLUE,
-            tabBarInactiveTintColor: COLORS.BLACK,
+            tabBarActiveTintColor: COLORS.JAFFA,
+            tabBarInactiveTintColor: COLORS.SHARK,
           }}
         />
       </Tab.Navigator>

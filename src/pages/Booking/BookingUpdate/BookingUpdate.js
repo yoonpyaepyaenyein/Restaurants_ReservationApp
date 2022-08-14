@@ -26,11 +26,11 @@ const BookingUpdate = ({navigation, route}) => {
   const FormatDate = data => {
     let dateTimeString =
       data.getDate() +
-      '/' +
+      '-' +
       (data.getMonth() + 1) +
-      '/' +
+      '-' +
       data.getFullYear() +
-      ' ';
+      ' at ';
 
     var hours = data.getHours();
     var minutes = data.getMinutes();
@@ -68,7 +68,7 @@ const BookingUpdate = ({navigation, route}) => {
     if (updateData.bookingName && updateData.phNo && updateData.time) {
       dispatch(actionBooking.updateBookings(updateData));
       navigation.goBack();
-      ToastAndroid.show('Booking Successful', ToastAndroid.SHORT);
+      ToastAndroid.show('Update Successful', ToastAndroid.SHORT);
     } else {
       ToastAndroid.show('Please Fill Information', ToastAndroid.SHORT);
     }

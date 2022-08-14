@@ -6,7 +6,6 @@ import {useSelector, useDispatch} from 'react-redux';
 //Component
 import BookingListContent from '@components/booking/bookingListContent/bookingListContent';
 import * as actionBooking from '@store/action/booking';
-import AlertModal from '@components/alert/alertModal';
 
 const BookingList = ({navigation}) => {
   const dispatch = useDispatch();

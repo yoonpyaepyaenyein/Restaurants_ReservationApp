@@ -1,31 +1,38 @@
 import React from 'react';
 import {View, Text, TextInput, TouchableOpacity} from 'react-native';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 //Style
 import styles from './style';
 
+//Component
+import {useLocal} from '../../hook/useLocal';
 import COLORS from '../../utils/colorUtils';
-import LinearGradient from 'react-native-linear-gradient';
 
 const LoginHeader = props => {
+  const local = useLocal();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to BUTTER</Text>
+      <Text style={styles.title}>Hello Again!</Text>
+      <Text style={styles.welcome}>Welcome</Text>
+      <Text style={styles.back}>back</Text>
 
-      <Text style={styles.subTitle}>Sign in to your account</Text>
+      {/* <Text style={styles.subTitle}>Sign in to your account</Text> */}
 
       {/* input Section */}
       <View style={styles.inputContainer}>
         <TextInput
           value={props.emailValue}
-          placeholder="Email"
+          placeholder={local.emailPlaceholder}
           placeholderTextColor={COLORS.GRAY}
           style={styles.emailInput}
           onChangeText={props.onChangeEmail}
         />
         <TextInput
           value={props.passValue}
-          placeholder="Password"
+          placeholder={local.passwordPlaceholder}
           placeholderTextColor={COLORS.GRAY}
           style={styles.emailInput}
           onChangeText={props.onChangePass}
@@ -37,20 +44,20 @@ const LoginHeader = props => {
       <View style={styles.btnContainer}>
         <TouchableOpacity onPress={props.goLogin}>
           <LinearGradient
-            colors={[COLORS.GRADIENT_3, COLORS.GRADIENT_3, COLORS.GRADIENT_1]}
+            colors={[COLORS.KIMBERLY, COLORS.BLUE_VIOLET, COLORS.GRADIENT_1]}
             start={{x: 0, y: 0}}
             end={{x: 1, y: 1}}
             style={styles.btnContent}>
-            <Text style={styles.loginText}>Login</Text>
+            <Text style={styles.loginText}>{local.login}</Text>
           </LinearGradient>
         </TouchableOpacity>
       </View>
       <View style={styles.qContainer}>
-        <Text style={styles.qText}>Don't have an account? </Text>
+        <Text style={styles.qText}>{local.registerText} </Text>
         <TouchableOpacity
           style={styles.regTextContainer}
           onPress={props.goRegister}>
-          <Text style={styles.regText}>REGISTER</Text>
+          <Text style={styles.regText}>{local.register}</Text>
         </TouchableOpacity>
       </View>
     </View>

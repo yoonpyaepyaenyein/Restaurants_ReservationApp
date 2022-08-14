@@ -8,12 +8,12 @@ import COLORS from '../../utils/colorUtils';
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: COLORS.BACKGROUND,
-    // flex: 1,
+    backgroundColor: COLORS.WHISPER,
+    flex: 1,
   },
   mail: {
     paddingTop: wp(3),
-    color: COLORS.BLACK,
+    color: COLORS.SHARK,
     fontFamily: 'Montserrat-BoldItalic',
     fontSize: wp(4),
   },
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp(6),
   },
   favText: {
-    color: COLORS.BLACK,
+    color: COLORS.SHARK,
     fontFamily: 'Montserrat-Regular',
   },
   logoutContainer: {
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     marginTop: wp(6),
   },
   signOut: {
-    color: COLORS.BLACK,
+    color: COLORS.SHARK,
     fontFamily: 'Montserrat-Regular',
   },
 });

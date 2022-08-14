@@ -1,6 +1,6 @@
 export default {
   BLACK: '#414449',
-  WHITE: '#fff',
+
   GRADIENT_1: '#67C8D5',
   GRADIENT_2: '#67C8D5',
 
@@ -11,4 +11,11 @@ export default {
   DARK_BLUE: '#3884A0',
   LIGHT_BLUE: '#67C8D5',
   BACKGROUND: '#F2F9FC',
+
+  BLUE_VIOLET: '#7357B8',
+  KIMBERLY: '#6A6A93',
+  JAFFA: '#E98B43',
+  SHARK: '#2C2C2D',
+  WHITE: '#FFFFFF',
+  WHISPER: '#F4F4F7',
 };

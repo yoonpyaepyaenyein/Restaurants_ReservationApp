@@ -26,7 +26,7 @@ const SettingHeader = props => {
         <Text
           style={{
             paddingTop: wp(3),
-            color: COLORS.BLACK,
+            color: COLORS.SHARK,
             fontFamily: 'Montserrat-Regular',
             fontSize: wp(2.6),
             paddingTop: wp(-1),
@@ -39,7 +39,7 @@ const SettingHeader = props => {
 
       <View style={styles.favContainer}>
         <View style={styles.heart}>
-          <HeartIcon width={hp(5)} height={hp(5)} colors={COLORS.BLACK} />
+          <HeartIcon width={hp(5)} height={hp(5)} colors={COLORS.JAFFA} />
         </View>
         <TouchableOpacity onPress={props.favourites}>
           <View style={styles.text}>
@@ -53,7 +53,7 @@ const SettingHeader = props => {
 
       <View style={styles.logoutContainer}>
         <View style={styles.logout}>
-          <LogoutIcon width={hp(5)} height={hp(5)} colors={COLORS.BLACK} />
+          <LogoutIcon width={hp(5)} height={hp(5)} colors={COLORS.JAFFA} />
         </View>
         <TouchableOpacity onPress={props.logout}>
           <View style={styles.logoutText}>

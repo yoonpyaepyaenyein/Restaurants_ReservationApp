@@ -7,6 +7,11 @@ import {
 import COLORS from '../../../utils/colorUtils';
 
 const styles = StyleSheet.create({
+  // detailContainer: {
+  //   height: wp(25),
+  //   backgroundColor: COLORS.BLUE_VIOLET,
+  //   paddingBottom: wp(3),
+  // },
   container: {
     height: 400,
     backgroundColor: COLORS.BACKGROUND,
@@ -14,13 +19,29 @@ const styles = StyleSheet.create({
     borderWidth: wp(0.2),
     borderBottomLeftRadius: wp(3),
     borderBottomRightRadius: wp(3),
+    // overflow: 'hidden',
   },
   imageBackground: {
+    // height: 270,
+    // top: 35,
+    // marginHorizontal: wp(6),
+    // borderRadius: wp(5),
+    // marginTop: wp(3),
+    // borderColor: COLORS.GRAY,
+    // borderWidth: wp(0.5),
+    // borderTopLeftRadius: wp(3),
+    width: '100%',
     height: 270,
-    top: 35,
-    marginHorizontal: wp(6),
-    borderRadius: wp(5),
-    marginTop: wp(3),
+  },
+  goBackIcon: {
+    width: wp(10),
+    backgroundColor: COLORS.JAFFA,
+    height: wp(10),
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginHorizontal: wp(2),
+    borderColor: COLORS.JAFFA,
+    borderRadius: wp(3),
   },
   detail: {
     flexDirection: 'row',
@@ -29,7 +50,7 @@ const styles = StyleSheet.create({
   },
   detailContainer: {
     height: 120,
-    backgroundColor: COLORS.WHITE,
+    backgroundColor: COLORS.WHISPER,
     marginHorizontal: 20,
     bottom: -230,
     elevation: 10,
@@ -42,9 +63,9 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    color: COLORS.DARK_BLUE,
-    fontSize: wp(4),
-    fontFamily: 'Montserrat-Bold',
+    color: COLORS.BLUE_VIOLET,
+    fontSize: wp(4.5),
+    fontFamily: 'Montserrat-BoldItalic',
   },
   header: {
     flexDirection: 'row',
@@ -61,22 +82,28 @@ const styles = StyleSheet.create({
     paddingHorizontal: wp(6),
   },
   rating: {
-    color: COLORS.DARK_BLUE,
-    fontFamily: 'Montserrat-Regular',
+    color: COLORS.BLUE_VIOLET,
+    fontFamily: 'Montserrat-Bold',
     fontSize: wp(3),
-    marginTop: wp(3),
+    marginTop: wp(4),
   },
   location: {
-    marginTop: 3,
+    marginTop: wp(3),
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: wp(3),
-    paddingTop: wp(2),
+    paddingTop: wp(3),
+    // borderColor: COLORS.BLUE_VIOLET,
+    // borderWidth: wp(0.1),
+    // width: wp(80),
+    // height: wp(8),
+    // marginHorizontal: wp(2),
+    // borderRadius: wp(2),
   },
 
   address: {
-    color: COLORS.DARK_BLUE,
-    fontFamily: 'Montserrat-Light',
+    color: COLORS.BLUE_VIOLET,
+    fontFamily: 'Montserrat-Regular',
     fontSize: wp(2.8),
     paddingLeft: wp(1),
   },
@@ -106,13 +133,17 @@ const styles = StyleSheet.create({
   },
 
   desContainer: {
-    top: wp(35),
+    marginVertical: wp(34),
     marginHorizontal: wp(2),
   },
+  desText: {
+    color: COLORS.SHARK,
+    fontFamily: 'Montserrat-Bold',
+    fontSize: wp(3.9),
+    marginHorizontal: wp(5),
+  },
   footer: {
-    height: 120,
-    flexDirection: 'row',
-    marginTop: wp(50),
+    height: wp(20),
   },
 
   bookInfo: {
@@ -125,27 +156,26 @@ const styles = StyleSheet.create({
     height: wp(6),
     marginTop: wp(1),
   },
-  btn: {
-    backgroundColor: COLORS.BACKGROUND,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: 45,
-
-    marginTop: wp(7),
-    marginHorizontal: wp(9),
-    borderRadius: 12,
-    borderColor: COLORS.BACKGROUND,
+  bookingContainer: {
+    width: wp(80),
+    height: wp(10),
+    marginTop: wp(-5),
+    borderColor: COLORS.JAFFA,
     borderWidth: wp(0.2),
+    borderRadius: wp(3),
+    marginHorizontal: wp(10),
+    backgroundColor: COLORS.JAFFA,
+    alignItems: 'center',
+    justifyContent: 'center',
     shadowOffset: {width: 0, height: 5},
-    shadowColor: COLORS.GRAY,
+    shadowColor: COLORS.WHISPER,
     shadowOpacity: hp(2),
     elevation: 5,
   },
-  btnText: {
-    color: COLORS.DARK_BLUE,
-    fontSize: wp(3.2),
+  booking: {
+    color: COLORS.WHISPER,
     fontFamily: 'Montserrat-Bold',
+    fontSize: wp(3.5),
   },
 });
 

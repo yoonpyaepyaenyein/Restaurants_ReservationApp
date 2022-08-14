@@ -9,25 +9,51 @@ import {
 import COLORS from '../../../utils/colorUtils';
 
 const styles = StyleSheet.create({
-  searchBar: {
-    borderColor: COLORS.LIGHT_BLUE,
-    backgroundColor: COLORS.GRAY,
-    borderWidth: wp(0.2),
-    marginHorizontal: hp(5),
-    marginVertical: hp(3),
-    borderRadius: wp(5),
-    backgroundColor: COLORS.WHITE,
-    paddingStart: hp(3),
-    shadowOffset: {width: 0, height: 5},
-    shadowColor: COLORS.DARK_BLUE,
-    shadowOpacity: hp(0.5),
-    elevation: 3,
-    paddingRight: wp(10),
+  container: {
+    height: wp(25),
+    backgroundColor: COLORS.BLUE_VIOLET,
+    paddingBottom: wp(3),
   },
-  heartless: {
-    position: 'absolute',
-    top: wp(10),
-    left: wp(16),
+  rightContainer: {
+    width: wp(20),
+    paddingLeft: wp(10),
+    marginLeft: wp(72),
+    marginTop: wp(-19),
+  },
+  nameInfo: {
+    paddingTop: wp(4),
+    paddingHorizontal: wp(5),
+  },
+  name: {
+    fontFamily: 'Montserrat-Bold',
+    fontSize: wp(5),
+    color: COLORS.WHITE,
+  },
+  textFav: {
+    color: COLORS.JAFFA,
+    fontFamily: 'Montserrat-Regular',
+    fontSize: wp(3),
+  },
+  icon: {
+    // paddingLeft: wp(10),
+    // paddingTop: wp(2),
+  },
+  favCon: {
+    marginTop: wp(3),
+    paddingHorizontal: wp(7),
+    flexDirection: 'row',
+    width: wp(60),
+    backgroundColor: COLORS.KIMBERLY,
+    height: wp(8),
+    alignItems: 'center',
+    borderWidth: wp(0.2),
+    borderColor: COLORS.GRAY,
+    borderRadius: wp(2),
+    marginHorizontal: wp(5),
+  },
+  heart: {
+    paddingLeft: wp(2),
+    paddingTop: wp(3),
   },
 });
 

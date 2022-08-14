@@ -4,6 +4,8 @@ import {View, Text} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Provider} from 'react-redux';
+import SplashScreen from 'react-native-splash-screen';
+import Lottie from 'lottie-react-native';
 
 //Component
 import AuthStack from './stack/AuthStack';
@@ -14,6 +16,7 @@ import {FavouriteContext} from '../context/context';
 import store from '../store';
 
 import TabNavigator from './tabs/TabNavigator';
+import AnimatedLottieView from 'lottie-react-native';
 
 const AppNavigator = () => {
   const [auth, setAuth] = useState(false);
@@ -23,6 +26,7 @@ const AppNavigator = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [favourite, setFavourite] = useState([]);
+  const [lang, setLang] = useState('en');
 
   /*Auth Context*/
   const context = {
@@ -34,6 +38,10 @@ const AppNavigator = () => {
     userInfo,
     getUserInfo: value => {
       setUserInfo(value);
+    },
+    lang,
+    changeLanguage: value => {
+      setLang(value);
     },
   };
 
@@ -87,6 +95,7 @@ const AppNavigator = () => {
   useEffect(() => {
     getData();
     loadFavourites();
+    SplashScreen.hide();
   }, []);
 
   useEffect(() => {
@@ -98,6 +107,8 @@ const AppNavigator = () => {
     try {
       const data = appStorage.getItem('@user.token');
       const userData = appStorage.getItem('@user.data');
+      const storeLang = appStorage.getItem('@language');
+      setLang(storeLang);
 
       if (data) {
         setAuth(true);
@@ -119,8 +130,19 @@ const AppNavigator = () => {
 
   if (splash) {
     return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text style={{fontSize: 20}}>Welcome to our app</Text>
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#F4F4F7',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}>
+        <Lottie
+          source={require('../../assets/images/splash1.json')}
+          autoPlay
+          loop={false}
+          speed={0.5}
+        />
       </View>
     );
   } else if (auth) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, TouchableOpacity, TextInput} from 'react-native';
+import {View, Text, TouchableOpacity, TextInput, StatusBar} from 'react-native';
 
 //Style
 import styles from './style';
@@ -8,22 +8,47 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
+import LinearGradient from 'react-native-linear-gradient';
+
 //Component
 import BackIcon from '@assets/icons/back';
 import COLORS from '../../../utils/colorUtils';
 import TimePicker from '../../../pages/TimePicker/TimePicker';
+import AvatarIcon from '@assets/icons/avatar';
+import Heart from '@assets/icons/heart';
 
 const BookingDetailContent = props => {
   return (
     <View>
-      <View style={styles.headerContainer}>
-        <TouchableOpacity style={styles.back} onPress={props.goBack}>
-          <BackIcon width={hp(3)} height={hp(3)} color={COLORS.BLACK} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Book a table</Text>
-      </View>
+      <LinearGradient
+        colors={[COLORS.BLUE_VIOLET, COLORS.BLUE_VIOLET, COLORS.WHISPER]}
+        style={styles.container}>
+        <StatusBar backgroundColor={COLORS.BLUE_VIOLET} />
+
+        <View
+          style={{
+            flexDirection: 'row',
+          }}>
+          <TouchableOpacity onPress={props.goBack}>
+            <View style={styles.backCon}>
+              <BackIcon
+                width={hp(2)}
+                height={hp(2)}
+                color={COLORS.WHITE}
+                colors={COLORS.WHITE}
+              />
+            </View>
+          </TouchableOpacity>
+          <View style={styles.nameInfo}>
+            <Text style={styles.name}>Book a table</Text>
+          </View>
+        </View>
+      </LinearGradient>
+
       <View style={styles.inputContainer}>
-        <Text style={styles.title}>Please fill information</Text>
+        <View style={styles.fillText}>
+          <Text style={styles.title}>Please fill information</Text>
+        </View>
         <TextInput
           style={styles.infoInput}
           placeholder="Name...."
@@ -40,6 +65,15 @@ const BookingDetailContent = props => {
           onChangeText={props.onChangeNo}
           keyboardType="number-pad"
         />
+
+        {/* <TextInput
+          style={styles.infoInput}
+          placeholder="Number of persons..."
+          placeholderTextColor={COLORS.GRAY}
+          value={props.noValue}
+          onChangeText={props.onChangeNo}
+          keyboardType="number-pad"
+        /> */}
         <View style={styles.datePicker}>
           <TimePicker
             isVisible={props.isVisible}
@@ -49,17 +83,11 @@ const BookingDetailContent = props => {
             showDatePicker={props.showDatePicker}
           />
         </View>
-        {/* <TouchableOpacity>
-          <View style={styles.datePicker}>
-            <Text style={{color: COLORS.BLACK, fontFamily: 'Montserrat-Light'}}>
-              Pick Date
-            </Text>
-          </View>
-        </TouchableOpacity> */}
       </View>
-      <View style={{marginTop: wp(30), alignItems: 'center'}}>
+
+      <View style={styles.confirmCon}>
         <TouchableOpacity onPress={props.confirm}>
-          <Text style={{color: COLORS.BLACK}}>CONFIRM</Text>
+          <Text style={styles.confirmText}>CONFIRM</Text>
         </TouchableOpacity>
       </View>
     </View>
