@@ -8,7 +8,7 @@ import COLORS from '../../utils/colorUtils';
 
 const styles = StyleSheet.create({
   container: {
-    marginLeft: wp(7),
+    marginLeft: wp(-4),
   },
   title: {
     color: COLORS.BLUE_VIOLET,
