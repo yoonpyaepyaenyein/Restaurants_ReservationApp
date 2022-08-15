@@ -22,8 +22,10 @@ import COLORS from '../../../utils/colorUtils';
 import TimeIcon from '@assets/icons/time';
 import PhoneIcon from '@assets/icons/phone';
 import PersonIcon from '@assets/icons/person';
+import {useLocal} from '../../../hook/useLocal';
 
 const BookingListContent = props => {
+  const local = useLocal();
   const renderComponent = ({item}) => {
     return (
       <View style={styles.bookingCard}>
@@ -58,10 +60,10 @@ const BookingListContent = props => {
         </View>
         <View style={styles.updateContainer}>
           <TouchableOpacity onPress={() => props.update(item)}>
-            <Text style={styles.updateTxt}>Update</Text>
+            <Text style={styles.updateTxt}>{local.Edit}</Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => props.delete(item)}>
-            <Text style={styles.deleteTxt}>Delete</Text>
+            <Text style={styles.deleteTxt}>{local.Delete}</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -76,7 +78,7 @@ const BookingListContent = props => {
         <StatusBar backgroundColor={COLORS.BLUE_VIOLET} />
 
         <View style={styles.nameInfo}>
-          <Text style={styles.name}>My Bookings</Text>
+          <Text style={styles.name}>Booking Lists</Text>
         </View>
       </LinearGradient>
 
@@ -94,8 +96,8 @@ const BookingListContent = props => {
         source={require('../../../../assets/images/empty.png')}
         style={styles.emptyImage}
       />
-      <Text style={styles.yet}>No Booking, yet.</Text>
-      <Text style={styles.bookText}>You don't have any booking list.</Text>
+      <Text style={styles.yet}>{local.NoBooking}</Text>
+      <Text style={styles.bookText}>{local.NoBookingList}</Text>
     </View>
   );
 };

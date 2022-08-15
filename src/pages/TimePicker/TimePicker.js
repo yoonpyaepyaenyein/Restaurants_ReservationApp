@@ -12,8 +12,10 @@ import {
 
 //Component
 import COLORS from '../../utils/colorUtils';
+import {useLocal} from '../../hook/useLocal';
 
 const TimePicker = props => {
+  const local = useLocal();
   return (
     <View>
       <TouchableOpacity onPress={props.showDatePicker}>
@@ -23,7 +25,7 @@ const TimePicker = props => {
               color: COLORS.GRAY,
               fontFamily: 'Montserrat-Light',
             }}>
-            Pick Date...
+            {local.PickDate}
           </Text>
         </View>
       </TouchableOpacity>

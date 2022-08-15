@@ -14,8 +14,10 @@ import LinearGradient from 'react-native-linear-gradient';
 import TimePicker from '../../../pages/TimePicker/TimePicker';
 import BackIcon from '@assets/icons/back';
 import COLORS from '../../../utils/colorUtils';
+import {useLocal} from '../../../hook/useLocal';
 
 const UpdateBooking = props => {
+  const local = useLocal();
   return (
     <View>
       <LinearGradient
@@ -44,10 +46,10 @@ const UpdateBooking = props => {
       </LinearGradient>
 
       <View style={styles.inputContainer}>
-        <Text style={styles.title}>Please fill information</Text>
+        <Text style={styles.title}>{local.FillInformation}</Text>
         <TextInput
           style={styles.infoInput}
-          placeholder="Name...."
+          placeholder={local.Name}
           placeholderTextColor={COLORS.GRAY}
           value={props.nameValue}
           onChangeText={props.onChangeName}
@@ -55,7 +57,7 @@ const UpdateBooking = props => {
 
         <TextInput
           style={styles.infoInput}
-          placeholder="Ph no...."
+          placeholder={local.PhNo}
           placeholderTextColor={COLORS.GRAY}
           value={props.phNoValue}
           onChangeText={props.onChangePhNo}
@@ -73,7 +75,7 @@ const UpdateBooking = props => {
       </View>
       <View style={styles.confirmCon}>
         <TouchableOpacity onPress={props.update}>
-          <Text style={styles.confirmText}>UPDATE</Text>
+          <Text style={styles.confirmText}>{local.Confirm}</Text>
         </TouchableOpacity>
       </View>
     </View>

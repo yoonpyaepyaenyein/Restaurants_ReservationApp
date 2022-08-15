@@ -14,10 +14,10 @@ import LinearGradient from 'react-native-linear-gradient';
 import BackIcon from '@assets/icons/back';
 import COLORS from '../../../utils/colorUtils';
 import TimePicker from '../../../pages/TimePicker/TimePicker';
-import AvatarIcon from '@assets/icons/avatar';
-import Heart from '@assets/icons/heart';
+import {useLocal} from '../../../hook/useLocal';
 
 const BookingDetailContent = props => {
+  const local = useLocal();
   return (
     <View>
       <LinearGradient
@@ -40,18 +40,18 @@ const BookingDetailContent = props => {
             </View>
           </TouchableOpacity>
           <View style={styles.nameInfo}>
-            <Text style={styles.name}>Book a table</Text>
+            <Text style={styles.name}>{local.BookTable}</Text>
           </View>
         </View>
       </LinearGradient>
 
       <View style={styles.inputContainer}>
         <View style={styles.fillText}>
-          <Text style={styles.title}>Please fill information</Text>
+          <Text style={styles.title}>{local.FillInformation}</Text>
         </View>
         <TextInput
           style={styles.infoInput}
-          placeholder="Name...."
+          placeholder={local.Name}
           placeholderTextColor={COLORS.GRAY}
           value={props.nameValue}
           onChangeText={props.onChangeName}
@@ -59,21 +59,12 @@ const BookingDetailContent = props => {
 
         <TextInput
           style={styles.infoInput}
-          placeholder="Ph no...."
+          placeholder={local.PhNo}
           placeholderTextColor={COLORS.GRAY}
           value={props.noValue}
           onChangeText={props.onChangeNo}
           keyboardType="number-pad"
         />
-
-        {/* <TextInput
-          style={styles.infoInput}
-          placeholder="Number of persons..."
-          placeholderTextColor={COLORS.GRAY}
-          value={props.noValue}
-          onChangeText={props.onChangeNo}
-          keyboardType="number-pad"
-        /> */}
         <View style={styles.datePicker}>
           <TimePicker
             isVisible={props.isVisible}
@@ -87,7 +78,7 @@ const BookingDetailContent = props => {
 
       <View style={styles.confirmCon}>
         <TouchableOpacity onPress={props.confirm}>
-          <Text style={styles.confirmText}>CONFIRM</Text>
+          <Text style={styles.confirmText}>{local.Confirm}</Text>
         </TouchableOpacity>
       </View>
     </View>

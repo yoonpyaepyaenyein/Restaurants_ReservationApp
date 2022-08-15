@@ -49,8 +49,8 @@ const Welcome = ({navigation}) => {
         {startClicked ? (
           <View style={styles.authButton}>
             <OrangeButton
-              text="Login"
-              startCLick={() => navigation.navigate('Login')}
+              text="Sign Up"
+              startCLick={() => navigation.navigate('Onboarding')}
             />
 
             <View style={styles.oRContainer}>
@@ -58,8 +58,8 @@ const Welcome = ({navigation}) => {
             </View>
 
             <OrangeButton
-              text="Register"
-              startCLick={() => navigation.navigate('Onboarding')}
+              text="Sign In"
+              startCLick={() => navigation.navigate('Login')}
             />
           </View>
         ) : (

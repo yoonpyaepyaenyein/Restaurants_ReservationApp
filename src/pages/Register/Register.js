@@ -5,8 +5,11 @@ import {ToastAndroid, TouchableOpacity} from 'react-native';
 import RegisterHeader from '@components/register/registerHeader';
 import {appStorage} from '../../utils/appStorage';
 import {AuthContext} from '../../context/context';
+import {useLocal} from '../../hook/useLocal';
 
 const Register = ({navigation}) => {
+  const local = useLocal();
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,12 +34,13 @@ const Register = ({navigation}) => {
         navigation.navigate('Onboarding');
         getAuth(true);
         getUserInfo(userData);
+        ToastAndroid.show(local.registerSuccess, ToastAndroid.SHORT);
       } catch (error) {
         console.log('error', error);
       }
     } else {
       getAuth(false);
-      ToastAndroid.show('Register failed!, Try Again', ToastAndroid.SHORT);
+      ToastAndroid.show(local.SomethingWrong, ToastAndroid.SHORT);
     }
   };
 

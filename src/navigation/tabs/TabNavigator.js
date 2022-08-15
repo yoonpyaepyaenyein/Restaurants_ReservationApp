@@ -19,34 +19,22 @@ import MapScreen from '@pages/maps/Map';
 import BookingStack from '../stack/BookingStack';
 import CartIcon from '@assets/icons/cart';
 import SettingStack from '../stack/SettingStack';
+import {useLocal} from '../../hook/useLocal';
 
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
-  const Setting = () => <Text>Settings</Text>;
+  const local = useLocal();
 
   return (
     <NavigationContainer>
-      <Tab.Navigator
-        screenOptions={{
-          tabBarStyle: {
-            // height: 60,
-            // position: 'absolute',
-            // borderRadius: 10,
-            // bottom: 6,
-            // right: 10,
-            // left: 10,
-            // backgroundColor: COLORS.KIMBERLY,
-            // borderTopLeftRadius: 5,
-            // borderTopRightRadius: 5,
-          },
-        }}>
+      <Tab.Navigator>
         <Tab.Screen
           name="DashboardStack"
           component={DashboardStack}
           options={{
             headerShown: false,
-            title: 'Dashboard',
+            title: local.Dashboard,
             tabBarIcon: ({focused, color, size}) => (
               <RestaurantIcon
                 colors={focused ? COLORS.JAFFA : COLORS.SHARK}
@@ -67,7 +55,7 @@ const TabNavigator = () => {
           component={MapScreen}
           options={{
             headerShown: false,
-            title: 'Map',
+            title: local.Map,
             tabBarIcon: ({focused, color, size}) => (
               <MapIcon
                 colors={focused ? COLORS.JAFFA : COLORS.SHARK}
@@ -89,7 +77,7 @@ const TabNavigator = () => {
           component={BookingStack}
           options={{
             headerShown: false,
-            title: 'Booking',
+            title: local.Booking,
             tabBarIcon: ({focused, color, size}) => (
               <CartIcon
                 colors={focused ? COLORS.JAFFA : COLORS.SHARK}
@@ -110,7 +98,7 @@ const TabNavigator = () => {
           component={SettingStack}
           options={{
             headerShown: false,
-            title: 'Setting',
+            title: local.Setting,
             tabBarIcon: ({focused, color, size}) => (
               <SettingIcon
                 colors={focused ? COLORS.JAFFA : COLORS.SHARK}

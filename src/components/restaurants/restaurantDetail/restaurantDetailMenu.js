@@ -22,8 +22,10 @@ import COLORS from '../../../utils/colorUtils';
 import Star from '@assets/icons/star';
 import Back from '@assets/icons/back';
 import Location from '@assets/icons/location';
+import {useLocal} from '../../../hook/useLocal';
 
 const RestaurantDetailMenu = props => {
+  const local = useLocal();
   const ratingArray = Array.from(new Array(props.restaurant.rating));
 
   return (
@@ -80,7 +82,7 @@ const RestaurantDetailMenu = props => {
 
         <TouchableOpacity onPress={props.booking}>
           <View style={styles.bookingContainer}>
-            <Text style={styles.booking}>BOOKING</Text>
+            <Text style={styles.booking}>{local.Bookings}</Text>
           </View>
         </TouchableOpacity>
       </LinearGradient>

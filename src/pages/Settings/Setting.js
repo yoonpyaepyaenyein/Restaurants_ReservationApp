@@ -1,12 +1,14 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import {ToastAndroid} from 'react-native';
 
 //Component
 import SettingHeader from '@components/setting/settingHeader';
 import {AuthContext} from '../../context/context';
 import {appStorage} from '../../utils/appStorage';
+import {useLocal} from '../../hook/useLocal';
 
 const Setting = ({navigation}) => {
+  const local = useLocal();
   const {auth, getAuth, userInfo} = useContext(AuthContext);
 
   const favouritesHandler = () => {
@@ -16,7 +18,7 @@ const Setting = ({navigation}) => {
   const logoutHandler = () => {
     appStorage.removeItem('@user.token');
     getAuth(false);
-    ToastAndroid.show('logout successful', ToastAndroid.SHORT);
+    ToastAndroid.show(local.LogoutSuccess, ToastAndroid.SHORT);
   };
 
   return (

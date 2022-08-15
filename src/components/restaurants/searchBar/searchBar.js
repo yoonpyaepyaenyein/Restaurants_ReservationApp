@@ -22,8 +22,10 @@ import Heartless from '@assets/icons/heartless';
 import Heart from '@assets/icons/heart';
 import COLORS from '../../../utils/colorUtils';
 import AvatarIcon from '../../../../assets/icons/avatar';
+import {useLocal} from '../../../hook/useLocal';
 
 const SearchBar = props => {
+  const local = useLocal();
   return (
     <LinearGradient
       colors={[COLORS.BLUE_VIOLET, COLORS.BLUE_VIOLET, COLORS.WHISPER]}
@@ -32,13 +34,16 @@ const SearchBar = props => {
 
       <View style={styles.leftContainer}>
         <View style={styles.nameInfo}>
-          <Text style={styles.name}>Hello , {props.data.name}</Text>
+          <Text style={styles.name}>
+            {' '}
+            {local.Hello} {local.Comma} {props.data.name}
+          </Text>
         </View>
       </View>
 
       <TouchableOpacity onPress={props.onFavouritesToggle}>
         <View style={styles.favCon}>
-          <Text style={styles.textFav}>Click your favourites here</Text>
+          <Text style={styles.textFav}>{local.ClickFavourites}</Text>
 
           <View style={styles.heart}>
             {props.isFavouriteToggle ? (

@@ -6,8 +6,10 @@ import {useSelector, useDispatch} from 'react-redux';
 //Component
 import BookingListContent from '@components/booking/bookingListContent/bookingListContent';
 import * as actionBooking from '@store/action/booking';
+import {useLocal} from '../../../hook/useLocal';
 
 const BookingList = ({navigation}) => {
+  const local = useLocal();
   const dispatch = useDispatch();
 
   const booking = useSelector(state => state.bookingsList.bookingItems);
@@ -36,6 +38,7 @@ const BookingList = ({navigation}) => {
 
   const deleteHandler = value => {
     dispatch(actionBooking.deleteBookings(value.id));
+    ToastAndroid.show(local.DeleteSuccess, ToastAndroid.SHORT);
   };
 
   const updateHandler = value => {

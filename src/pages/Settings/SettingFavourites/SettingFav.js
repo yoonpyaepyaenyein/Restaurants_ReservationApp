@@ -15,8 +15,11 @@ import {RestaurantContext} from '../../../context/context';
 import RestaurantInfoCard from '@components/restaurants/restaurantInfo/restaurantInfoCard';
 import COLORS from '../../../utils/colorUtils';
 import BackIcon from '@assets/icons/back';
+import {useLocal} from '../../../hook/useLocal';
 
 const SettingFav = ({navigation}) => {
+  const local = useLocal();
+
   const {favourite} = useContext(FavouriteContext);
   const {restaurants} = useContext(RestaurantContext);
 
@@ -46,7 +49,7 @@ const SettingFav = ({navigation}) => {
             </View>
           </TouchableOpacity>
           <View style={Styles.nameInfo}>
-            <Text style={Styles.name}>Your Favourite Restaurants</Text>
+            <Text style={Styles.name}>{local.YourFavourite}</Text>
           </View>
         </View>
       </LinearGradient>
@@ -78,12 +81,12 @@ const SettingFav = ({navigation}) => {
         </View>
       </TouchableOpacity>
       <View style={Styles.nonContainer}>
-        <Text style={Styles.nonText}>Uh-oh! You don't have any</Text>
-        <Text style={Styles.nonText}>favourites yet.</Text>
-        <Text style={Styles.nonFav}>Click the ♡ to add your favourites</Text>
+        <Text style={Styles.nonText}>{local.UhOh}</Text>
+        <Text style={Styles.nonText}>{local.Yet}</Text>
+        <Text style={Styles.nonFav}>{local.Click}</Text>
         <TouchableOpacity onPress={() => navigation.navigate('RestaurantInfo')}>
           <View style={Styles.browseContainer}>
-            <Text style={Styles.browseText}>Browse Now</Text>
+            <Text style={Styles.browseText}>{local.BrowseNow}</Text>
           </View>
         </TouchableOpacity>
       </View>

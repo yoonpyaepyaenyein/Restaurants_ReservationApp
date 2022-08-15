@@ -13,7 +13,7 @@ const RegisterHeader = props => {
     <View style={styles.container}>
       <Text style={styles.title}>Hello !</Text>
       <Text style={styles.welcome}>Signup to</Text>
-      <Text style={styles.back}>get started</Text>
+      <Text style={styles.back}>Get Started</Text>
 
       {/* <Text style={styles.subTitle}>Create A New Account</Text> */}
 

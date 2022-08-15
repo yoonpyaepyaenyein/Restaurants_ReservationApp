@@ -6,14 +6,16 @@ import {useSelector, useDispatch} from 'react-redux';
 //Component
 import UpdateBooking from '@components/booking/updateBooking/updateBooking';
 import * as actionBooking from '@store/action/booking';
+import {useLocal} from '../../../hook/useLocal';
 
 const BookingUpdate = ({navigation, route}) => {
+  const local = useLocal();
+
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [Formatted, setFormatted] = useState('');
   const [bookingName, setBookingName] = useState('');
   const [phNo, setPhNo] = useState();
   const {data} = route.params;
-  console.log('DaTa:::', data);
 
   const dispatch = useDispatch();
 
@@ -68,9 +70,9 @@ const BookingUpdate = ({navigation, route}) => {
     if (updateData.bookingName && updateData.phNo && updateData.time) {
       dispatch(actionBooking.updateBookings(updateData));
       navigation.goBack();
-      ToastAndroid.show('Update Successful', ToastAndroid.SHORT);
+      ToastAndroid.show(local.UpdateSuccess, ToastAndroid.SHORT);
     } else {
-      ToastAndroid.show('Please Fill Information', ToastAndroid.SHORT);
+      ToastAndroid.show(local.TryAgain, ToastAndroid.SHORT);
     }
   };
 

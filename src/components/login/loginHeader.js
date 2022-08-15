@@ -15,9 +15,9 @@ const LoginHeader = props => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hello Again!</Text>
-      <Text style={styles.welcome}>Welcome</Text>
-      <Text style={styles.back}>back</Text>
+      <Text style={styles.title}>Hello!</Text>
+      <Text style={styles.welcome}>This is EATERY ~_~</Text>
+      <Text style={styles.back}>Let's find out . . .</Text>
 
       {/* <Text style={styles.subTitle}>Sign in to your account</Text> */}
 

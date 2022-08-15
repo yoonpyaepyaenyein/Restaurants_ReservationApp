@@ -10,10 +10,10 @@ import {
 //component
 import BookingDetailContent from '@components/booking/bookingDetail/bookingDetailContent';
 import * as actionBooking from '../../../store/action/booking';
-import COLORS from '../../../utils/colorUtils';
-import TimePicker from '../../TimePicker/TimePicker';
+import {useLocal} from '../../../hook/useLocal';
 
 const BookingDetail = ({navigation, route}) => {
+  const local = useLocal();
   const {restaurant} = route.params;
   const dispatch = useDispatch();
 
@@ -39,9 +39,9 @@ const BookingDetail = ({navigation, route}) => {
     if (data.bookingName && data.phNo && data.time) {
       dispatch(actionBooking.addBooking(data));
       navigation.goBack();
-      ToastAndroid.show('Add Successful', ToastAndroid.SHORT);
+      ToastAndroid.show(local.BookingSuccess, ToastAndroid.SHORT);
     } else {
-      ToastAndroid.show('Please Fill Information', ToastAndroid.SHORT);
+      ToastAndroid.show(local.TryAgain, ToastAndroid.SHORT);
     }
   };
 

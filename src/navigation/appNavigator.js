@@ -141,7 +141,7 @@ const AppNavigator = () => {
           source={require('../../assets/images/splash1.json')}
           autoPlay
           loop={false}
-          speed={0.6}
+          speed={0.9}
         />
       </View>
     );

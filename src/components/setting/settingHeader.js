@@ -15,8 +15,10 @@ import COLORS from '../../utils/colorUtils';
 import HeartIcon from '@assets/icons/heart';
 import LogoutIcon from '@assets/icons/logout';
 import AvatarIcon from '@assets/icons/avatar';
+import {useLocal} from '../../hook/useLocal';
 
 const SettingHeader = props => {
+  const local = useLocal();
   return (
     <View style={styles.container}>
       {/* Avatar */}
@@ -43,8 +45,8 @@ const SettingHeader = props => {
         </View>
         <TouchableOpacity onPress={props.favourites}>
           <View style={styles.text}>
-            <Text style={styles.favText}>Favourites</Text>
-            <Text style={styles.favText}>View to your favourites</Text>
+            <Text style={styles.favText}>{local.Favourites}</Text>
+            <Text style={styles.favText}>{local.ClickFav}</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -61,7 +63,7 @@ const SettingHeader = props => {
         </View>
         <TouchableOpacity onPress={props.logout}>
           <View style={styles.logoutText}>
-            <Text style={styles.signOut}>Logout</Text>
+            <Text style={styles.signOut}>{local.Logout}</Text>
           </View>
         </TouchableOpacity>
       </View>

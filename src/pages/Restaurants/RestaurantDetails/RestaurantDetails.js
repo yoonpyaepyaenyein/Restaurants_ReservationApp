@@ -1,16 +1,13 @@
-import React, {useState} from 'react';
-import {View, Text} from 'react-native';
+import React from 'react';
+import {View} from 'react-native';
 
-import {List} from 'react-native-paper';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 
 //Style
 import Styles from './Style';
 
 //Component
 import RestaurantDetailMenu from '@components/restaurants/restaurantDetail/restaurantDetailMenu';
-import * as actionBooking from '@store/action/booking';
-import BookingDetail from '../../Booking/BookingDetail/BookingDetail';
 
 const RestaurantDetails = ({route, navigation}) => {
   const {restaurant} = route.params;
@@ -22,8 +19,6 @@ const RestaurantDetails = ({route, navigation}) => {
 
   const bookingHandler = value => {
     navigation.navigate('BookingDetail', {restaurant: value});
-    // dispatch(actionBooking.addBooking(value));
-    // console.log('RES>>>', value);
   };
 
   return (
