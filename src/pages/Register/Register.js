@@ -1,11 +1,10 @@
 import React, {useState, useContext, useEffect} from 'react';
-import {ToastAndroid} from 'react-native';
+import {ToastAndroid, TouchableOpacity} from 'react-native';
 
 //Component
 import RegisterHeader from '@components/register/registerHeader';
 import {appStorage} from '../../utils/appStorage';
 import {AuthContext} from '../../context/context';
-import {err} from 'react-native-svg/lib/typescript/xml';
 
 const Register = ({navigation}) => {
   const [name, setName] = useState('');
@@ -16,6 +15,7 @@ const Register = ({navigation}) => {
   const {auth, getAuth, getUserInfo} = useContext(AuthContext);
 
   const registerHandler = () => {
+    navigation.navigate('Onboarding');
     let token = '1234567890';
     let userData = {
       name: name,
@@ -23,10 +23,12 @@ const Register = ({navigation}) => {
       password: password,
       confirmPassword: confirmPassword,
     };
+
     if (name && email && password && password === confirmPassword) {
       try {
         appStorage.setItem('@user.data', JSON.stringify(userData));
         appStorage.setItem('@user.token', token);
+        navigation.navigate('Onboarding');
         getAuth(true);
         getUserInfo(userData);
       } catch (error) {

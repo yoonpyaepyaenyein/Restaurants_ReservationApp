@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Provider} from 'react-redux';
 import SplashScreen from 'react-native-splash-screen';
 import Lottie from 'lottie-react-native';
+import {PersistGate} from 'redux-persist/integration/react';
 
 //Component
 import AuthStack from './stack/AuthStack';
@@ -13,10 +14,9 @@ import {AuthContext} from '../context/context';
 import {appStorage} from '../utils/appStorage';
 import {RestaurantContext} from '../context/context';
 import {FavouriteContext} from '../context/context';
-import store from '../store';
+import {store, persistor} from '../store';
 
 import TabNavigator from './tabs/TabNavigator';
-import AnimatedLottieView from 'lottie-react-native';
 
 const AppNavigator = () => {
   const [auth, setAuth] = useState(false);
@@ -27,7 +27,6 @@ const AppNavigator = () => {
   const [error, setError] = useState(null);
   const [favourite, setFavourite] = useState([]);
   const [lang, setLang] = useState('en');
-  const [viewOnboarding, setViewedOnboarding] = useState(false);
 
   /*Auth Context*/
   const context = {
@@ -149,13 +148,15 @@ const AppNavigator = () => {
   } else if (auth) {
     return (
       <Provider store={store}>
-        <AuthContext.Provider value={context}>
-          <FavouriteContext.Provider value={favouriteContext}>
-            <RestaurantContext.Provider value={restaurantContext}>
-              <TabNavigator />
-            </RestaurantContext.Provider>
-          </FavouriteContext.Provider>
-        </AuthContext.Provider>
+        <PersistGate loading={null} persistor={persistor}>
+          <AuthContext.Provider value={context}>
+            <FavouriteContext.Provider value={favouriteContext}>
+              <RestaurantContext.Provider value={restaurantContext}>
+                <TabNavigator />
+              </RestaurantContext.Provider>
+            </FavouriteContext.Provider>
+          </AuthContext.Provider>
+        </PersistGate>
       </Provider>
     );
   } else {

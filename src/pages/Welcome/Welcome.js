@@ -59,7 +59,7 @@ const Welcome = ({navigation}) => {
 
             <OrangeButton
               text="Register"
-              startCLick={() => navigation.navigate('Register')}
+              startCLick={() => navigation.navigate('Onboarding')}
             />
           </View>
         ) : (

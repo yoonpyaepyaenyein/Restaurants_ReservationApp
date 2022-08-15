@@ -1,4 +1,4 @@
-import React, {useLayoutEffect} from 'react';
+import React, {useLayoutEffect, useContext} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 import {
@@ -11,6 +11,7 @@ import RestaurantInfoScreen from '@pages/Restaurants/RestaurantInfo/RestaurantIn
 import RestaurantDetailsScreen from '@pages/Restaurants/RestaurantDetails/RestaurantDetails';
 import BookingDetailScreen from '../../pages/Booking/BookingDetail/BookingDetail';
 import COLORS from '../../utils/colorUtils';
+import {AuthContext} from '../../context/context';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,13 +35,6 @@ const DashboardStack = ({navigation, route}) => {
       navigation.setOptions({
         tabBarStyle: {
           display: 'flex',
-          // height: 60,
-          // position: 'absolute',
-          // borderRadius: 10,
-          // bottom: 6,
-          // right: 10,
-          // left: 10,
-          // backgroundColor: COLORS.KIMBERLY,
         },
       });
     } else {
